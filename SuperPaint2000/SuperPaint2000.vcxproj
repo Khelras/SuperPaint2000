@@ -137,11 +137,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cRectangle.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Toolbox.cpp" />
+    <ClCompile Include="cToolbox.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Toolbox.h" />
+    <ClInclude Include="cRectangle.h" />
+    <ClInclude Include="cTool.h" />
+    <ClInclude Include="cToolbox.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

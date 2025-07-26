@@ -1,10 +1,10 @@
-#include <SFML/Graphics.hpp>
+#include "cRectangle.h"
 
 int main() {
     sf::RenderWindow Window(sf::VideoMode({ 1200, 900 }), "Super Paint 2000!");
 
-    sf::RectangleShape RectangleTool({ 0, 0 });
-    RectangleTool.setFillColor(sf::Color::Red);
+    //sf::RectangleShape RectangleTool({ 0, 0 });
+    //RectangleTool.setFillColor(sf::Color::Red);
     sf::Vector2f ShapeOrigin;
 
     sf::RectangleShape m_CanvasShape;
@@ -13,6 +13,9 @@ int main() {
     m_CanvasShape.setSize(sf::Vector2f(Window.getSize()));
     if (m_CanvasTexture.resize(Window.getSize()));
     m_CanvasShape.setTexture(&m_CanvasTexture.getTexture());
+
+    // Rectangle Tool
+    cRectangle cRectangle(0, 0);
 
     while (Window.isOpen()) {
         while (const std::optional event = Window.pollEvent()) {
@@ -24,16 +27,16 @@ int main() {
             // Mouse Button Pressed Event
             if (const auto* mousePressed = event->getIf<sf::Event::MouseButtonPressed>()) {
                 if (mousePressed->button == sf::Mouse::Button::Left) {
-                    RectangleTool.setPosition(sf::Vector2f(sf::Mouse::getPosition(Window)));
-                    ShapeOrigin = RectangleTool.getPosition();
+                    cRectangle.m_Tool.setPosition(sf::Vector2f(sf::Mouse::getPosition(Window)));
+                    ShapeOrigin = cRectangle.m_Tool.getPosition();
                 }
             }
 
             // Mouse Button Released Event
             if (const auto* mouseReleased = event->getIf<sf::Event::MouseButtonReleased>()) {
                 if (mouseReleased->button == sf::Mouse::Button::Left) {
-                    m_CanvasTexture.draw(RectangleTool);
-                    RectangleTool.setSize(sf::Vector2f(0, 0));
+                    m_CanvasTexture.draw(cRectangle.m_Tool);
+                    cRectangle.m_Tool.setSize(sf::Vector2f(0, 0));
                     m_CanvasTexture.display();
                 }
             }
@@ -43,12 +46,12 @@ int main() {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
             sf::Vector2f offset = sf::Vector2f(sf::Mouse::getPosition(Window)) - ShapeOrigin;
 
-            RectangleTool.setSize(offset);
+            cRectangle.m_Tool.setSize(offset);
         }
 
         Window.clear();
         Window.draw(m_CanvasShape);
-        Window.draw(RectangleTool);
+        Window.draw(cRectangle.m_Tool);
         Window.display();
     }
 }
