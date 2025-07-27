@@ -138,6 +138,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cRectangle.cpp" />
+    <ClCompile Include="cWindowManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="cToolbox.cpp" />
   </ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="cRectangle.h" />
     <ClInclude Include="cTool.h" />
     <ClInclude Include="cToolbox.h" />
+    <ClInclude Include="cWindowManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

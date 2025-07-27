@@ -16,6 +16,9 @@
     <Filter Include="Header Files\Tools">
       <UniqueIdentifier>{ae63da3a-5f6d-4008-8a7a-693188519b0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{be35d15c-a38a-418e-b8fe-c7c051ea6c04}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -25,6 +28,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="cRectangle.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="cWindowManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -37,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="cRectangle.h">
       <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="cWindowManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

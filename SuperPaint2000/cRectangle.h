@@ -1,3 +1,4 @@
+#pragma once
 #include "cTool.h"
 
 // Inherits from cShape Class
