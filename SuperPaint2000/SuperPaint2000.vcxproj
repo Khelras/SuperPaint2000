@@ -137,12 +137,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cCanvas.cpp" />
     <ClCompile Include="cRectangle.cpp" />
     <ClCompile Include="cWindowManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="cToolbox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cCanvas.h" />
     <ClInclude Include="cRectangle.h" />
     <ClInclude Include="cTool.h" />
     <ClInclude Include="cToolbox.h" />

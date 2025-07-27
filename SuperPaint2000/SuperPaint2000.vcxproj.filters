@@ -33,6 +33,9 @@
     <ClCompile Include="cWindowManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cCanvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cToolbox.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files\Tools</Filter>
     </ClInclude>
     <ClInclude Include="cWindowManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cCanvas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -8,19 +8,10 @@ cWindowManager::~cWindowManager() {
 
 }
 
-bool cWindowManager::Process() {
-    //sf::RenderWindow Window(sf::VideoMode({ 1200, 900 }), "Super Paint 2000!");
-
-    //sf::RectangleShape RectangleTool({ 0, 0 });
-    //RectangleTool.setFillColor(sf::Color::Red);
+void cWindowManager::Process() {
     sf::Vector2f ShapeOrigin;
 
-    sf::RectangleShape m_CanvasShape;
-    sf::RenderTexture m_CanvasTexture;
-
-    m_CanvasShape.setSize(sf::Vector2f(this->getSize()));
-    if (m_CanvasTexture.resize(this->getSize()));
-    m_CanvasShape.setTexture(&m_CanvasTexture.getTexture());
+    cCanvas Canvas(*this);
 
     // Rectangle Tool
     cRectangle cRectangle(0, 0);
@@ -43,9 +34,8 @@ bool cWindowManager::Process() {
             // Mouse Button Released Event
             if (const auto* mouseReleased = event->getIf<sf::Event::MouseButtonReleased>()) {
                 if (mouseReleased->button == sf::Mouse::Button::Left) {
-                    m_CanvasTexture.draw(cRectangle.m_Tool);
+                    Canvas.Draw(cRectangle.m_Tool);
                     cRectangle.m_Tool.setSize(sf::Vector2f(0, 0));
-                    m_CanvasTexture.display();
                 }
             }
         }
@@ -58,10 +48,8 @@ bool cWindowManager::Process() {
         }
 
         this->clear();
-        this->draw(m_CanvasShape);
+        this->draw(Canvas.GetCanvasShape());
         this->draw(cRectangle.m_Tool);
         this->display();
     }
-
-    return false;
 }
