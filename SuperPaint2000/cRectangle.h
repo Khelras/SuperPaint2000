@@ -3,13 +3,17 @@
 
 // Inherits from cShape Class
 class cRectangle : public cTool {
-public:
-	// Member Variables
+private:
+	sf::Vector2f m_Origin;
 	sf::RectangleShape m_Tool;
 
-	// Constructor and Destructor
-	cRectangle(float _length, float _width, sf::Color _color = sf::Color::White);
+public:
+	cRectangle(sf::RenderWindow* _window, cCanvas* _canvas, float _length, float _width, sf::Color _color = sf::Color::White);
 	~cRectangle();
 
 	void SetColor(sf::Color _color) override; // Extended SetColor Function
+	void UseToolOnce() override;
+	void UseToolRealtime() override;
+	void UseToolEnd() override;
+	void Draw() override;
 };

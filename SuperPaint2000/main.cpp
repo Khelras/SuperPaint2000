@@ -1,8 +1,8 @@
-#include "cWindowManager.h"
+#include "cWindow.h"
 
 int main() {
-    // Window Manager
-    cWindowManager* Window = new cWindowManager("Super Paint 2000!");
+    // Window
+    cWindow* Window = new cWindow("Super Paint 2000!");
 
     // Process
     Window->Process();
