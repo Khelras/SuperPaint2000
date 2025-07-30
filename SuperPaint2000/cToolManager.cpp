@@ -7,7 +7,7 @@ cToolManager::cToolManager(sf::RenderWindow* _window) {
 	this->m_ToolColour = sf::Color::White;
 
 	// Tools
-	this->m_ToolRectangle = new cRectangle(this->m_Window, this->m_Canvas, 0, 0);
+	this->m_ToolRectangle = new cRectangle(this->m_Window, this->m_Canvas, 0, 0, this->m_ToolColour);
 }
 
 cToolManager::~cToolManager() {

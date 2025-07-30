@@ -48,6 +48,9 @@
     <ClCompile Include="cTool.cpp">
       <Filter>Source Files\Tools</Filter>
     </ClCompile>
+    <ClCompile Include="cButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cTool.h">
@@ -66,6 +69,9 @@
       <Filter>Header Files\Managers</Filter>
     </ClInclude>
     <ClInclude Include="cWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

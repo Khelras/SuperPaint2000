@@ -10,8 +10,6 @@ cWindow::~cWindow() {
 }
 
 void cWindow::Process() {
-    sf::Vector2f ShapeOrigin;
-
     while (this->isOpen()) {
         this->m_EventManager->Process();
     }

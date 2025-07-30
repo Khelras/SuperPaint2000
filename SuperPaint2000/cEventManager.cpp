@@ -3,11 +3,13 @@
 cEventManager::cEventManager(sf::RenderWindow* _window) {
     this->m_Window = _window;
     this->m_ToolManager = new cToolManager(this->m_Window);
+    this->m_Button = new cButton(sf::Vector2f(50, 50), sf::Color::Green);
 }
 
 cEventManager::~cEventManager() {
 	delete(this->m_Window);
     delete(this->m_ToolManager);
+    delete(this->m_Button);
 }
 
 void cEventManager::Process() {
@@ -46,6 +48,6 @@ void cEventManager::ProcessRealtime() {
 
     this->m_Window->clear();
     this->m_ToolManager->Draw();
+    this->m_Window->draw(this->m_Button->m_ButtonShape);
     this->m_Window->display();
 }
-

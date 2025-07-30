@@ -137,6 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cButton.cpp" />
     <ClCompile Include="cCanvas.cpp" />
     <ClCompile Include="cEventManager.cpp" />
     <ClCompile Include="cRectangle.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="cToolManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cButton.h" />
     <ClInclude Include="cCanvas.h" />
     <ClInclude Include="cEventManager.h" />
     <ClInclude Include="cRectangle.h" />

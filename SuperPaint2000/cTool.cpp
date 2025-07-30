@@ -23,7 +23,7 @@ void cTool::UseTool(bool _isRealtime, bool _isEnd) {
 	}
 	else {
 		if (_isEnd == true) {
-
+			this->UseToolEnd();
 		}
 		else {
 			this->UseToolOnce();
