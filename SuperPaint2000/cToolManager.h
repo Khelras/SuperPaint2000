@@ -1,5 +1,6 @@
 #pragma once
 #include "cRectangle.h"
+#include "cCircle.h"
 
 enum Tools {
 	TOOL_RECTANGLE,   // Rectangle Tool
@@ -19,6 +20,7 @@ private:
 
 	// Tools
 	cRectangle* m_ToolRectangle;
+	cCircle* m_ToolCircle;
 
 public:
 	cToolManager(sf::RenderWindow* _window);

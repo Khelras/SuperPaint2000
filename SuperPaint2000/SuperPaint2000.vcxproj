@@ -137,23 +137,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cButton.cpp" />
+    <ClCompile Include="cButtonCircle.cpp" />
+    <ClCompile Include="cButtonRectangle.cpp" />
+    <ClCompile Include="cButtonManager.cpp" />
     <ClCompile Include="cCanvas.cpp" />
+    <ClCompile Include="cCircle.cpp" />
     <ClCompile Include="cEventManager.cpp" />
     <ClCompile Include="cRectangle.cpp" />
     <ClCompile Include="cTool.cpp" />
-    <ClCompile Include="cWindow.cpp" />
+    <ClCompile Include="cWindowManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="cToolManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cButton.h" />
+    <ClInclude Include="cButtonCircle.h" />
+    <ClInclude Include="cButtonRectangle.h" />
+    <ClInclude Include="cButtonManager.h" />
     <ClInclude Include="cCanvas.h" />
+    <ClInclude Include="cCircle.h" />
     <ClInclude Include="cEventManager.h" />
     <ClInclude Include="cRectangle.h" />
     <ClInclude Include="cTool.h" />
     <ClInclude Include="cToolManager.h" />
-    <ClInclude Include="cWindow.h" />
+    <ClInclude Include="cWindowManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

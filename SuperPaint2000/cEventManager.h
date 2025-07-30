@@ -1,18 +1,18 @@
 #pragma once
-#include "cToolManager.h"
-#include "cButton.h"
+#include "cButtonManager.h"
 
 class cEventManager {
 private:
-	sf::RenderWindow* m_Window;
+	cWindowManager* m_Window;
 	cToolManager* m_ToolManager;
-	cButton* m_Button;
+	cButtonManager* m_ButtonManager;
 
-	void ProcessEvent(const std::optional<sf::Event> _event);
+	void ProcessEventMain(const std::optional<sf::Event> _event);
+	void ProcessEventTool(const std::optional<sf::Event> _event);
 	void ProcessRealtime();
 
 public:
-	cEventManager(sf::RenderWindow* _window);
+	cEventManager(cWindowManager* _window);
 	~cEventManager();
 
 	void Process();

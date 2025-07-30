@@ -1,13 +1,13 @@
-#include "cWindow.h"
+#include "cWindowManager.h"
 
 int main() {
-    // Window
-    cWindow* Window = new cWindow("Super Paint 2000!");
+    // Managers
+
+    cWindowManager* WindowManager = new cWindowManager(sf::VideoMode({ 1200, 900 }), "Super Paint 2000!");
 
     // Process
-    Window->Process();
+    WindowManager->Process();
 
     // Memory Cleanup
-    delete(Window);
-    Window = nullptr;
+    delete(WindowManager);
 }

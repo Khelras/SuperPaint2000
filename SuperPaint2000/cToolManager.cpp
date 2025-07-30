@@ -8,6 +8,7 @@ cToolManager::cToolManager(sf::RenderWindow* _window) {
 
 	// Tools
 	this->m_ToolRectangle = new cRectangle(this->m_Window, this->m_Canvas, 0, 0, this->m_ToolColour);
+	this->m_ToolCircle = new cCircle(this->m_Window, this->m_Canvas, 0, this->m_ToolColour);
 }
 
 cToolManager::~cToolManager() {
@@ -16,8 +17,7 @@ cToolManager::~cToolManager() {
 }
 
 void cToolManager::SelectTool(Tools _newTool) {
-	// Needs to be hooked to an input register
-	// Call this function (with a paramater) to change the tool
+	this->m_SelectedTool = _newTool;
 }
 
 Tools cToolManager::GetSelectedTool() const {
@@ -35,7 +35,7 @@ void cToolManager::UseTool(bool _isRealtime, bool _isEnd) {
 		
 		// Circle Tool
 		case (Tools::TOOL_CIRCLE): {
-			
+			this->m_ToolCircle->UseTool(_isRealtime, _isEnd);
 		break;
 		}
 
@@ -76,7 +76,7 @@ void cToolManager::Draw() {
 
 		// Circle Tool
 		case (Tools::TOOL_CIRCLE): {
-
+			this->m_ToolCircle->Draw();
 		break;
 		}
 
