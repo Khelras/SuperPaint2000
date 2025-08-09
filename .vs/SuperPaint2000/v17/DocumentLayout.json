@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cCircle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cCircle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cWindowManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cWindowManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cRectangle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cRectangle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEventManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cEventManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cToolManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cToolManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cButtonManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEllipse.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cEllipse.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cButtonManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEllipse.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cEllipse.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cToolManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cToolManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cTool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cTool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cTool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cTool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +47,105 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "cRectangle.cpp",
-              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cRectangle.cpp",
-              "RelativeDocumentMoniker": "SuperPaint2000\\cRectangle.cpp",
-              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cRectangle.cpp",
-              "RelativeToolTip": "SuperPaint2000\\cRectangle.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Title": "main.cpp",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\main.cpp",
+              "RelativeDocumentMoniker": "SuperPaint2000\\main.cpp",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\main.cpp",
+              "RelativeToolTip": "SuperPaint2000\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-30T05:47:49.035Z",
+              "WhenOpened": "2025-08-09T12:03:43.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "cCircle.cpp",
-              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cCircle.cpp",
-              "RelativeDocumentMoniker": "SuperPaint2000\\cCircle.cpp",
-              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cCircle.cpp",
-              "RelativeToolTip": "SuperPaint2000\\cCircle.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
+              "Title": "cWindowManager.cpp",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cWindowManager.cpp",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cWindowManager.cpp",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cWindowManager.cpp",
+              "RelativeToolTip": "SuperPaint2000\\cWindowManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-30T05:28:27.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "cToolManager.cpp",
-              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cToolManager.cpp",
-              "RelativeDocumentMoniker": "SuperPaint2000\\cToolManager.cpp",
-              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cToolManager.cpp",
-              "RelativeToolTip": "SuperPaint2000\\cToolManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-30T05:16:04.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "cEventManager.cpp",
-              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEventManager.cpp",
-              "RelativeDocumentMoniker": "SuperPaint2000\\cEventManager.cpp",
-              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEventManager.cpp",
-              "RelativeToolTip": "SuperPaint2000\\cEventManager.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADYAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-30T04:10:45.525Z",
+              "WhenOpened": "2025-08-09T11:59:36.152Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "cButtonManager.cpp",
-              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonManager.cpp",
-              "RelativeDocumentMoniker": "SuperPaint2000\\cButtonManager.cpp",
-              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonManager.cpp",
-              "RelativeToolTip": "SuperPaint2000\\cButtonManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAACAAAAAAAAAA==",
+              "Title": "cEllipse.h",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEllipse.h",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cEllipse.h",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEllipse.h",
+              "RelativeToolTip": "SuperPaint2000\\cEllipse.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-09T11:33:46.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "cEllipse.cpp",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEllipse.cpp",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cEllipse.cpp",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cEllipse.cpp",
+              "RelativeToolTip": "SuperPaint2000\\cEllipse.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-30T04:04:12.983Z",
+              "WhenOpened": "2025-08-09T11:24:37.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "cTool.cpp",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cTool.cpp",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cTool.cpp",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cTool.cpp",
+              "RelativeToolTip": "SuperPaint2000\\cTool.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-09T11:07:58.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "cTool.h",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cTool.h",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cTool.h",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cTool.h",
+              "RelativeToolTip": "SuperPaint2000\\cTool.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-09T11:07:07.326Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "cButtonManager.h",
-              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonManager.h",
-              "RelativeDocumentMoniker": "SuperPaint2000\\cButtonManager.h",
-              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonManager.h",
-              "RelativeToolTip": "SuperPaint2000\\cButtonManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "Title": "cToolManager.h",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cToolManager.h",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cToolManager.h",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cToolManager.h",
+              "RelativeToolTip": "SuperPaint2000\\cToolManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-30T05:03:31.638Z",
+              "WhenOpened": "2025-08-09T11:03:55.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "cToolManager.cpp",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cToolManager.cpp",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cToolManager.cpp",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cToolManager.cpp",
+              "RelativeToolTip": "SuperPaint2000\\cToolManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-09T11:00:54.643Z",
               "EditorCaption": ""
             }
           ]

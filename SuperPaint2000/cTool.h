@@ -2,8 +2,10 @@
 #include "cCanvas.h"
 
 class cTool {
-private:
-	sf::Color m_color;
+protected:
+	sf::Color m_FillColor;
+	sf::Color m_OutlineColor;
+	float m_Thickness;
 
 public:
 	sf::RenderWindow* m_Window;
@@ -12,14 +14,12 @@ public:
 	cTool(sf::RenderWindow* _window, cCanvas* _canvas);
 	~cTool();
 
-	// Normal Functions
-	sf::Color GetColor() const;
-
 	// Abstract Functions
-	virtual void SetColor(sf::Color _color);
-	virtual void UseTool(bool _isRealtime, bool _isEnd);
-	virtual void UseToolOnce() = 0;
-	virtual void UseToolRealtime() = 0;
-	virtual void UseToolEnd() = 0;
+	virtual void SetFillColor(sf::Color _color);
+	virtual void SetOutlineColor(sf::Color _color);
+	virtual void SetOutlineThickness(float _thickness);
+	virtual void UseToolOnce() = 0; // Starts the Draw Process
+	virtual void UseToolRealtime() = 0; // The Draw Process (in Realtime)
+	virtual void UseToolEnd() = 0; // Completes the Draw Process
 	virtual void Draw() = 0;
 };

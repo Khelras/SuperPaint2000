@@ -8,12 +8,14 @@ private:
 	sf::RectangleShape m_Tool;
 
 public:
-	cRectangle(sf::RenderWindow* _window, cCanvas* _canvas, float _length, float _width, sf::Color _color = sf::Color::White);
+	cRectangle(sf::RenderWindow* _window, cCanvas* _canvas, float _length, float _width);
 	~cRectangle();
 
-	void SetColor(sf::Color _color) override; // Extended SetColor Function
-	void UseToolOnce() override;
-	void UseToolRealtime() override;
-	void UseToolEnd() override;
+	void SetFillColor(sf::Color _color) override; // Extended SetFillColor Function
+	void SetOutlineColor(sf::Color _color) override; // Extended SetOutlineColor Function
+	void SetOutlineThickness(float _thickness) override;  // Extended SetOutlineThickness Function
+	void UseToolOnce() override; // Starts the Draw Process
+	void UseToolRealtime() override; // The Draw Process
+	void UseToolEnd() override; // Completes the Draw Process
 	void Draw() override;
 };

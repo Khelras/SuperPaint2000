@@ -4,6 +4,7 @@ cCanvas::cCanvas(sf::RenderWindow& _window, sf::Color _colorBG) {
     // Making of Canvas
     this->m_CanvasShape.setSize(sf::Vector2f(_window.getSize()));
     if (this->m_CanvasTexture.resize(_window.getSize()));
+    this->m_CanvasTexture.clear(_colorBG);
     this->m_CanvasShape.setTexture(&(this->m_CanvasTexture).getTexture());
 }
 

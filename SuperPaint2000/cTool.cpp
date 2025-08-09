@@ -3,30 +3,21 @@
 cTool::cTool(sf::RenderWindow* _window, cCanvas* _canvas) {
 	this->m_Window = _window;
 	this->m_Canvas = _canvas;
+	this->m_Thickness = 1.0f;
 }
 
 cTool::~cTool() {
 
 }
 
-sf::Color cTool::GetColor() const {
-	return this->m_color;
+void cTool::SetFillColor(sf::Color _color) {
+	this->m_FillColor = _color;
 }
 
-void cTool::SetColor(sf::Color _color) {
-	this->m_color = _color;
+void cTool::SetOutlineColor(sf::Color _color) {
+	this->m_OutlineColor = _color;
 }
 
-void cTool::UseTool(bool _isRealtime, bool _isEnd) {
-	if (_isRealtime == true) {
-		this->UseToolRealtime();
-	}
-	else {
-		if (_isEnd == true) {
-			this->UseToolEnd();
-		}
-		else {
-			this->UseToolOnce();
-		}
-	}
+void cTool::SetOutlineThickness(float _thickness) {
+	this->m_Thickness = _thickness;
 }

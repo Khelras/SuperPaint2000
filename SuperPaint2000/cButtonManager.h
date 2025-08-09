@@ -1,13 +1,13 @@
 #pragma once
 #include "cWindowManager.h"
 #include "cButtonRectangle.h"
-#include "cButtonCircle.h"
+#include "cButtonEllipse.h"
 
 class cButtonManager {
 private:
 	cWindowManager* m_Window;
 	cButtonRectangle* m_ButtonRectangle;
-	cButtonCircle* m_ButtonCircle;
+	cButtonEllipse* m_ButtonEllipse;
 
 public:
 	cButtonManager(cToolManager* _toolManager, cWindowManager* _window);

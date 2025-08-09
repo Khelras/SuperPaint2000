@@ -37,14 +37,14 @@ void cEventManager::ProcessEventMain(const std::optional<sf::Event> _event) {
     // Mouse Button Pressed Event
     if (const auto* mousePressed = _event->getIf<sf::Event::MouseButtonPressed>()) {
         if (mousePressed->button == sf::Mouse::Button::Left) {
-            this->m_ToolManager->UseTool(false, false);
+            this->m_ToolManager->GetSelectedTool()->UseToolOnce();
         }
     }
 
     // Mouse Button Released Event
     if (const auto* mouseReleased = _event->getIf<sf::Event::MouseButtonReleased>()) {
         if (mouseReleased->button == sf::Mouse::Button::Left) {
-            this->m_ToolManager->UseTool(false, true);
+            this->m_ToolManager->GetSelectedTool()->UseToolEnd();
         }
     }
 }
@@ -61,13 +61,13 @@ void cEventManager::ProcessEventTool(const std::optional<sf::Event> _event) {
 void cEventManager::ProcessRealtime() {
     if (this->m_Window->hasFocus()) {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-            this->m_ToolManager->UseTool(true, false);
+            this->m_ToolManager->GetSelectedTool()->UseToolRealtime();
         }
     }
 
     // Main Window Drawing
     this->m_Window->clear();
-    this->m_ToolManager->Draw();
+    this->m_ToolManager->GetSelectedTool()->Draw();
     this->m_Window->display();
 
     // Tool Window Drawing

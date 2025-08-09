@@ -1,14 +1,11 @@
 #pragma once
 #include "cRectangle.h"
-#include "cCircle.h"
+#include "cEllipse.h"
 
 enum Tools {
 	TOOL_RECTANGLE,   // Rectangle Tool
-	TOOL_CIRCLE,      // Circle Tool
-	TOOL_LINE,        // Line Tool
-	TOOL_PENCIL,      // Pencil Tool
-	TOOL_ERASER,      // Eraser Tool
-	TOOL_EYEDROP      // Eyedrop Tool
+	TOOL_ELLIPSE,     // Ellipse Tool
+	TOOL_LINE         // Line Tool
 };
 
 class cToolManager {
@@ -16,19 +13,22 @@ private:
 	sf::RenderWindow* m_Window;
 	cCanvas* m_Canvas;
 	Tools m_SelectedTool;
-	sf::Color m_ToolColour;
+	sf::Color m_ToolFillColour;
+	sf::Color m_ToolOutlineColor;
+	float m_ToolOutlineThickness;
 
 	// Tools
 	cRectangle* m_ToolRectangle;
-	cCircle* m_ToolCircle;
+	cEllipse* m_ToolEllipse;
 
 public:
 	cToolManager(sf::RenderWindow* _window);
 	~cToolManager();
 
 	void SelectTool(Tools _newTool);
-	Tools GetSelectedTool() const;
-	void UseTool(bool _isRealtime = false, bool _isEnd = false);
-	void Draw();
+	cTool* GetSelectedTool() const;
+	void SetFillColor(sf::Color _color);
+	void SetOutlineColor(sf::Color _color);
+	void SetOutlineThickness(float _thickness);
 };
 

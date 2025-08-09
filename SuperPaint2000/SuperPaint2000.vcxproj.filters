@@ -60,10 +60,10 @@
     <ClCompile Include="cButtonManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
-    <ClCompile Include="cButtonCircle.cpp">
+    <ClCompile Include="cButtonEllipse.cpp">
       <Filter>Source Files\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="cCircle.cpp">
+    <ClCompile Include="cEllipse.cpp">
       <Filter>Source Files\Tools</Filter>
     </ClCompile>
   </ItemGroup>
@@ -89,13 +89,13 @@
     <ClInclude Include="cButtonRectangle.h">
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="cButtonCircle.h">
+    <ClInclude Include="cButtonEllipse.h">
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="cButtonManager.h">
       <Filter>Header Files\Managers</Filter>
     </ClInclude>
-    <ClInclude Include="cCircle.h">
+    <ClInclude Include="cEllipse.h">
       <Filter>Header Files\Tools</Filter>
     </ClInclude>
   </ItemGroup>

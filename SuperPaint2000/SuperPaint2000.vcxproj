@@ -137,11 +137,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cButtonCircle.cpp" />
+    <ClCompile Include="cButtonEllipse.cpp" />
     <ClCompile Include="cButtonRectangle.cpp" />
     <ClCompile Include="cButtonManager.cpp" />
     <ClCompile Include="cCanvas.cpp" />
-    <ClCompile Include="cCircle.cpp" />
+    <ClCompile Include="cEllipse.cpp" />
     <ClCompile Include="cEventManager.cpp" />
     <ClCompile Include="cRectangle.cpp" />
     <ClCompile Include="cTool.cpp" />
@@ -150,11 +150,11 @@
     <ClCompile Include="cToolManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cButtonCircle.h" />
+    <ClInclude Include="cButtonEllipse.h" />
     <ClInclude Include="cButtonRectangle.h" />
     <ClInclude Include="cButtonManager.h" />
     <ClInclude Include="cCanvas.h" />
-    <ClInclude Include="cCircle.h" />
+    <ClInclude Include="cEllipse.h" />
     <ClInclude Include="cEventManager.h" />
     <ClInclude Include="cRectangle.h" />
     <ClInclude Include="cTool.h" />
