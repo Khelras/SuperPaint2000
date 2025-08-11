@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButton.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cButton.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonLine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cButtonLine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonRectangle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A752D6D-7DCE-43DD-A7A0-6D639D886365}|SuperPaint2000\\SuperPaint2000.vcxproj|solutionrelative:SuperPaint2000\\cButtonRectangle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "cButton.cpp",
-              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButton.cpp",
-              "RelativeDocumentMoniker": "SuperPaint2000\\cButton.cpp",
-              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButton.cpp",
-              "RelativeToolTip": "SuperPaint2000\\cButton.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "cButtonRectangle.cpp",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonRectangle.cpp",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cButtonRectangle.cpp",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonRectangle.cpp",
+              "RelativeToolTip": "SuperPaint2000\\cButtonRectangle.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-11T03:41:23.315Z",
+              "WhenOpened": "2025-08-11T09:36:59.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "cButtonLine.cpp",
+              "DocumentMoniker": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonLine.cpp",
+              "RelativeDocumentMoniker": "SuperPaint2000\\cButtonLine.cpp",
+              "ToolTip": "G:\\MDS\\2025\\Second Semester\\GD1P03 - 2D Game Programming\\Assessments\\Assessment 1 - Paint Tool\\SuperPaint2000\\SuperPaint2000\\cButtonLine.cpp",
+              "RelativeToolTip": "SuperPaint2000\\cButtonLine.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-11T09:36:45.366Z",
               "EditorCaption": ""
             }
           ]

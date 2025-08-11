@@ -1,12 +1,11 @@
 #include "cRectangle.h"
 
 // Constructor
-cRectangle::cRectangle(sf::RenderWindow* _window, cCanvas* _canvas, float _length, float _width) : cTool(_window, _canvas) {
+cRectangle::cRectangle(sf::RenderWindow* _window, cCanvas* _canvas) : cTool(_window, _canvas) {
 	// Tool
-	this->m_Tool.setSize({ _length, _width });
 	this->SetFillColor(sf::Color::Transparent);
 	this->SetOutlineColor(sf::Color::Black);
-	this->m_Tool.setOutlineThickness(1.0f);
+	this->SetOutlineThickness(1.0f);
 }
 
 // Destructor

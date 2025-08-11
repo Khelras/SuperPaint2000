@@ -2,6 +2,7 @@
 #include "cToolManager.h"
 #include "cButton.h"
 
+// Inherits from cButton Class
 class cButtonEllipse : public cButton {
 private:
 	cToolManager* m_ToolManager;

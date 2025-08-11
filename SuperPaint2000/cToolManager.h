@@ -1,6 +1,7 @@
 #pragma once
 #include "cRectangle.h"
 #include "cEllipse.h"
+#include "cLine.h"
 
 enum Tools {
 	TOOL_RECTANGLE,   // Rectangle Tool
@@ -20,6 +21,7 @@ private:
 	// Tools
 	cRectangle* m_ToolRectangle;
 	cEllipse* m_ToolEllipse;
+	cLine* m_ToolLine;
 
 public:
 	cToolManager(sf::RenderWindow* _window);
@@ -30,5 +32,6 @@ public:
 	void SetFillColor(sf::Color _color);
 	void SetOutlineColor(sf::Color _color);
 	void SetOutlineThickness(float _thickness);
+	float GetOutlineThickness() const;
 };
 

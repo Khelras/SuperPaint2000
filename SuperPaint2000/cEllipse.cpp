@@ -3,12 +3,11 @@
 #include <iostream>
 
 // Constructor
-cEllipse::cEllipse(sf::RenderWindow* _window, cCanvas* _canvas, float _radius) : cTool(_window, _canvas) {
+cEllipse::cEllipse(sf::RenderWindow* _window, cCanvas* _canvas) : cTool(_window, _canvas) {
 	// Tool
-	this->m_Tool.setRadius(_radius);
 	this->SetFillColor(sf::Color::Transparent);
 	this->SetOutlineColor(sf::Color::Black);
-	this->m_Tool.setOutlineThickness(1.0f);
+	this->SetOutlineThickness(1.0f);
 }
 
 // Destructor
@@ -32,6 +31,15 @@ void cEllipse::SetOutlineColor(sf::Color _color) {
 	// Extend Functionality
 	// Changes the Outline Color of Ellipse Tool
 	this->m_Tool.setOutlineColor(_color);
+}
+
+void cEllipse::SetOutlineThickness(float _thickness) {
+	// Call SetColor Function from cTool Parent Class
+	cTool::SetOutlineThickness(_thickness);
+
+	// Extend Functionality
+	// Changes the Outline Thickness of Ellipse Tool
+	this->m_Tool.setOutlineThickness(_thickness);
 }
 
 void cEllipse::UseToolOnce() { // Starts the Draw Process

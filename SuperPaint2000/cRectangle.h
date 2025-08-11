@@ -1,14 +1,14 @@
 #pragma once
 #include "cTool.h"
 
-// Inherits from cShape Class
+// Inherits from cTool Class
 class cRectangle : public cTool {
 private:
 	sf::Vector2f m_Origin;
 	sf::RectangleShape m_Tool;
 
 public:
-	cRectangle(sf::RenderWindow* _window, cCanvas* _canvas, float _length, float _width);
+	cRectangle(sf::RenderWindow* _window, cCanvas* _canvas);
 	~cRectangle();
 
 	void SetFillColor(sf::Color _color) override; // Extended SetFillColor Function

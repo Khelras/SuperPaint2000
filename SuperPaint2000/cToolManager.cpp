@@ -11,8 +11,9 @@ cToolManager::cToolManager(sf::RenderWindow* _window) {
 	this->m_ToolOutlineThickness = 1.0f;
 
 	// Tools
-	this->m_ToolRectangle = new cRectangle(this->m_Window, this->m_Canvas, 0, 0);
-	this->m_ToolEllipse = new cEllipse(this->m_Window, this->m_Canvas, 0);
+	this->m_ToolRectangle = new cRectangle(this->m_Window, this->m_Canvas);
+	this->m_ToolEllipse = new cEllipse(this->m_Window, this->m_Canvas);
+	this->m_ToolLine = new cLine(this->m_Window, this->m_Canvas);
 
 	// Applies Default Settings onto Selected Tool
 	this->GetSelectedTool()->SetFillColor(this->m_ToolFillColour);
@@ -24,6 +25,7 @@ cToolManager::~cToolManager() {
 	delete(this->m_Canvas);
 	delete(this->m_ToolRectangle);
 	delete(this->m_ToolEllipse);
+	delete(this->m_ToolLine);
 }
 
 void cToolManager::SelectTool(Tools _newTool) {
@@ -32,6 +34,7 @@ void cToolManager::SelectTool(Tools _newTool) {
 	// Applies the current tool settings onto the newly selected tool
 	this->GetSelectedTool()->SetFillColor(this->m_ToolFillColour);
 	this->GetSelectedTool()->SetOutlineColor(this->m_ToolOutlineColor);
+	this->GetSelectedTool()->SetOutlineThickness(this->m_ToolOutlineThickness);
 }
 
 cTool* cToolManager::GetSelectedTool() const {
@@ -51,7 +54,7 @@ cTool* cToolManager::GetSelectedTool() const {
 
 		// Line Tool
 		case (Tools::TOOL_LINE): {
-
+			return this->m_ToolLine;
 			break;
 		}
 
@@ -64,8 +67,11 @@ cTool* cToolManager::GetSelectedTool() const {
 }
 
 void cToolManager::SetFillColor(sf::Color _color) {
-	this->m_ToolFillColour = _color;
-	this->GetSelectedTool()->SetFillColor(_color);
+	// Because Line Tool has not Fill Color
+	if (this->GetSelectedTool() != this->m_ToolLine) {
+		this->m_ToolFillColour = _color;
+		this->GetSelectedTool()->SetFillColor(_color);
+	}
 }
 
 void cToolManager::SetOutlineColor(sf::Color _color) {
@@ -75,4 +81,9 @@ void cToolManager::SetOutlineColor(sf::Color _color) {
 
 void cToolManager::SetOutlineThickness(float _thickness) {
 	this->m_ToolOutlineThickness = _thickness;
+	this->GetSelectedTool()->SetOutlineThickness(_thickness);
+}
+
+float cToolManager::GetOutlineThickness() const {
+	return this->m_ToolOutlineThickness;
 }

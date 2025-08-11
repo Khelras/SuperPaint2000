@@ -7,7 +7,6 @@ cEventManager::cEventManager(cWindowManager* _window) {
 }
 
 cEventManager::~cEventManager() {
-	delete(this->m_Window);
     delete(this->m_ToolManager);
     delete(this->m_ButtonManager);
 }
@@ -53,7 +52,10 @@ void cEventManager::ProcessEventTool(const std::optional<sf::Event> _event) {
     // Mouse Button Pressed Event
     if (const auto* mousePressed = _event->getIf<sf::Event::MouseButtonPressed>()) {
         if (mousePressed->button == sf::Mouse::Button::Left) {
-            this->m_ButtonManager->ClickButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow));
+            // If a Button Exists at Mouse Position
+            if (this->m_ButtonManager->HasButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow)) == true) {
+                this->m_ButtonManager->ClickButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow));
+            }
         }
     }
 }
@@ -80,7 +82,7 @@ void cEventManager::ProcessRealtime() {
     this->m_Window->display();
 
     // Tool Window Drawing
-    this->m_Window->m_ToolWindow.clear(sf::Color(60, 60, 60, 200));
+    this->m_Window->m_ToolWindow.clear(sf::Color(90, 90, 90, 200));
     this->m_ButtonManager->DrawButtons();
     this->m_Window->m_ToolWindow.display();
 }

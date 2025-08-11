@@ -139,11 +139,15 @@
   <ItemGroup>
     <ClCompile Include="cButton.cpp" />
     <ClCompile Include="cButtonEllipse.cpp" />
+    <ClCompile Include="cButtonLine.cpp" />
     <ClCompile Include="cButtonRectangle.cpp" />
     <ClCompile Include="cButtonManager.cpp" />
+    <ClCompile Include="cButtonThicknessDown.cpp" />
+    <ClCompile Include="cButtonThicknessUp.cpp" />
     <ClCompile Include="cCanvas.cpp" />
     <ClCompile Include="cEllipse.cpp" />
     <ClCompile Include="cEventManager.cpp" />
+    <ClCompile Include="cLine.cpp" />
     <ClCompile Include="cRectangle.cpp" />
     <ClCompile Include="cTool.cpp" />
     <ClCompile Include="cWindowManager.cpp" />
@@ -153,11 +157,15 @@
   <ItemGroup>
     <ClInclude Include="cButton.h" />
     <ClInclude Include="cButtonEllipse.h" />
+    <ClInclude Include="cButtonLine.h" />
     <ClInclude Include="cButtonRectangle.h" />
     <ClInclude Include="cButtonManager.h" />
+    <ClInclude Include="cButtonThicknessDown.h" />
+    <ClInclude Include="cButtonThicknessUp.h" />
     <ClInclude Include="cCanvas.h" />
     <ClInclude Include="cEllipse.h" />
     <ClInclude Include="cEventManager.h" />
+    <ClInclude Include="cLine.h" />
     <ClInclude Include="cRectangle.h" />
     <ClInclude Include="cTool.h" />
     <ClInclude Include="cToolManager.h" />

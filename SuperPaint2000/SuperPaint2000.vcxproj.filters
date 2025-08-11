@@ -69,6 +69,18 @@
     <ClCompile Include="cButton.cpp">
       <Filter>Source Files\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="cLine.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="cButtonLine.cpp">
+      <Filter>Source Files\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cButtonThicknessUp.cpp">
+      <Filter>Source Files\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cButtonThicknessDown.cpp">
+      <Filter>Source Files\Buttons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cTool.h">
@@ -102,6 +114,18 @@
       <Filter>Header Files\Tools</Filter>
     </ClInclude>
     <ClInclude Include="cButton.h">
+      <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cLine.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="cButtonLine.h">
+      <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cButtonThicknessUp.h">
+      <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cButtonThicknessDown.h">
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
   </ItemGroup>
