@@ -2,7 +2,7 @@
 
 cToolManager::cToolManager(sf::RenderWindow* _window) {
 	this->m_Window = _window;
-	this->m_Canvas = new cCanvas(*(this->m_Window));
+	this->m_Canvas = new cCanvas(*(this->m_Window), sf::Color(255, 255, 255, 250));
 
 	// Default Settings
 	this->m_SelectedTool = Tools::TOOL_RECTANGLE;

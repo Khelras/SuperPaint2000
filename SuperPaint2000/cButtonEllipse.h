@@ -1,15 +1,17 @@
 #pragma once
 #include "cToolManager.h"
+#include "cButton.h"
 
-class cButtonEllipse {
+class cButtonEllipse : public cButton {
 private:
 	cToolManager* m_ToolManager;
-
-public:
 	sf::CircleShape m_ButtonShape;
 
-	cButtonEllipse(cToolManager* _toolManager, sf::Vector2f _pos, sf::Color _color);
+public:
+	cButtonEllipse(cToolManager* _toolManager, sf::Vector2f _size);
 	~cButtonEllipse();
 
-	void UseButton();
+	// Overridden Functions
+	void UseButton() override;
+	void DrawButton(cWindowManager* _window, float _posY) override;
 };

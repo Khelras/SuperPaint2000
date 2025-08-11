@@ -137,6 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cButton.cpp" />
     <ClCompile Include="cButtonEllipse.cpp" />
     <ClCompile Include="cButtonRectangle.cpp" />
     <ClCompile Include="cButtonManager.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="cToolManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cButton.h" />
     <ClInclude Include="cButtonEllipse.h" />
     <ClInclude Include="cButtonRectangle.h" />
     <ClInclude Include="cButtonManager.h" />

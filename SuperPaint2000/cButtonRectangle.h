@@ -1,16 +1,18 @@
 #pragma once
 #include "cToolManager.h"
+#include "cButton.h"
 
-class cButtonRectangle {
+class cButtonRectangle : public cButton {
 private:
 	cToolManager* m_ToolManager;
-
-public:
 	sf::RectangleShape m_ButtonShape;
 
-	cButtonRectangle(cToolManager* _toolManager, sf::Vector2f _pos, sf::Color _color);
+public:
+	cButtonRectangle(cToolManager* _toolManager, sf::Vector2f _size);
 	~cButtonRectangle();
 
-	void UseButton();
+	// Overridden Functions
+	void UseButton() override;
+	void DrawButton(cWindowManager* _window, float _posY) override;
 };
 

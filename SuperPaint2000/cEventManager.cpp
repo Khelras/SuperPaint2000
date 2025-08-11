@@ -53,12 +53,21 @@ void cEventManager::ProcessEventTool(const std::optional<sf::Event> _event) {
     // Mouse Button Pressed Event
     if (const auto* mousePressed = _event->getIf<sf::Event::MouseButtonPressed>()) {
         if (mousePressed->button == sf::Mouse::Button::Left) {
-            this->m_ButtonManager->ClickButtons(sf::Mouse::getPosition(this->m_Window->m_ToolWindow));
+            this->m_ButtonManager->ClickButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow));
         }
     }
 }
 
 void cEventManager::ProcessRealtime() {
+    // Button Hovering
+    if (this->m_ButtonManager->HasButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow))) {
+        this->m_ButtonManager->HoverButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow));
+    }
+    else { // Remove Hovers
+        this->m_ButtonManager->RemoveHovers();
+    }
+
+    // Drawing
     if (this->m_Window->hasFocus()) {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
             this->m_ToolManager->GetSelectedTool()->UseToolRealtime();
@@ -71,7 +80,7 @@ void cEventManager::ProcessRealtime() {
     this->m_Window->display();
 
     // Tool Window Drawing
-    this->m_Window->m_ToolWindow.clear();
+    this->m_Window->m_ToolWindow.clear(sf::Color(60, 60, 60, 200));
     this->m_ButtonManager->DrawButtons();
     this->m_Window->m_ToolWindow.display();
 }
