@@ -75,10 +75,10 @@
     <ClCompile Include="cButtonLine.cpp">
       <Filter>Source Files\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="cButtonThicknessUp.cpp">
+    <ClCompile Include="cButtonSizeUp.cpp">
       <Filter>Source Files\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="cButtonThicknessDown.cpp">
+    <ClCompile Include="cButtonSizeDown.cpp">
       <Filter>Source Files\Buttons</Filter>
     </ClCompile>
     <ClCompile Include="cFileInterface.cpp">
@@ -95,6 +95,12 @@
     </ClCompile>
     <ClCompile Include="cButtonPolygon.cpp">
       <Filter>Source Files\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cButtonStamp.cpp">
+      <Filter>Source Files\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cStamp.cpp">
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -137,10 +143,10 @@
     <ClInclude Include="cButtonLine.h">
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="cButtonThicknessUp.h">
+    <ClInclude Include="cButtonSizeUp.h">
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="cButtonThicknessDown.h">
+    <ClInclude Include="cButtonSizeDown.h">
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="cFileInterface.h">
@@ -157,6 +163,12 @@
     </ClInclude>
     <ClInclude Include="cButtonPolygon.h">
       <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cButtonStamp.h">
+      <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cStamp.h">
+      <Filter>Header Files\Tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

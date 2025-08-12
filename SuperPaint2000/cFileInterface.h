@@ -8,17 +8,14 @@ protected:
 	cToolManager* m_ToolManager;
 	sf::Font m_Font;
 	sf::Text* m_Text;
+	sf::Texture* m_ImportedImageTexture;
 
+	cFileInterface(cToolManager* _toolManager, sf::Vector2f _size);
 	cFileInterface(cToolManager* _toolManager, sf::Vector2f _size, std::string _text);
 	~cFileInterface();
 
-	void LoadFile(cWindowManager* _window, cCanvas* _canvas);
+	sf::Texture* LoadFile(); // ONLY Loads File
+	void LoadFile(cWindowManager* _window, cCanvas* _canvas); // Loads File AND Display it onto Canvas
 	void SaveFile(sf::RenderTexture* _canvasTexture);
-	
-public:
-	// Overridden Functions
-	void Select() override; // Removes Select() Functionality
-	void Unselect() override; // Removes Unselect() Functionality
-	void DrawButton(cWindowManager* _window, float _posY) override;
 };
 

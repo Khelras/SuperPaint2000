@@ -6,6 +6,7 @@ protected:
 	sf::Color m_FillColor;
 	sf::Color m_OutlineColor;
 	float m_Thickness;
+	float m_ScaleFactor;
 
 public:
 	sf::RenderWindow* m_Window;
@@ -15,9 +16,11 @@ public:
 	~cTool();
 
 	// Abstract Functions
+	virtual void ImportImage(sf::Texture* _imageTexutre) {}; // Empty as it's only for the Stamp Tool
 	virtual void SetFillColor(sf::Color _color);
 	virtual void SetOutlineColor(sf::Color _color);
 	virtual void SetOutlineThickness(float _thickness);
+	virtual void SetScaleFactor(float _scale);
 	virtual void UseToolOnce() = 0; // Starts the Draw Process
 	virtual void UseToolRealtime() = 0; // The Draw Process (in Realtime)
 	virtual void UseToolEnd() = 0; // Completes the Draw Process

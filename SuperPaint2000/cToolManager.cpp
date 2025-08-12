@@ -9,12 +9,14 @@ cToolManager::cToolManager(sf::RenderWindow* _window) {
 	this->m_ToolFillColour = sf::Color::Transparent;
 	this->m_ToolOutlineColor = sf::Color::Black;
 	this->m_ToolOutlineThickness = 1.0f;
+	this->m_ToolScaleFactor = 1.0f;
 
 	// Tools
 	this->m_ToolRectangle = new cRectangle(this->m_Window, this->m_Canvas);
 	this->m_ToolEllipse = new cEllipse(this->m_Window, this->m_Canvas);
 	this->m_ToolLine = new cLine(this->m_Window, this->m_Canvas);
 	this->m_ToolPolygon = new cPolygon(this->m_Window, this->m_Canvas);
+	this->m_ToolStamp = new cStamp(this->m_Window, this->m_Canvas);
 
 	// Applies Default Settings onto Selected Tool
 	this->GetSelectedTool()->SetFillColor(this->m_ToolFillColour);
@@ -28,6 +30,7 @@ cToolManager::~cToolManager() {
 	delete(this->m_ToolEllipse);
 	delete(this->m_ToolLine);
 	delete(this->m_ToolPolygon);
+	delete(this->m_ToolStamp);
 }
 
 cCanvas* cToolManager::GetCanvas() const {
@@ -63,7 +66,7 @@ cTool* cToolManager::GetSelectedTool() const {
 
 		// Line Tool
 		case (Tools::TOOL_STAMP): {
-
+			return this->m_ToolStamp;
 			break;
 		}
 
@@ -83,6 +86,10 @@ float cToolManager::GetOutlineThickness() const {
 	return this->m_ToolOutlineThickness;
 }
 
+float cToolManager::GetScaleFactor() const {
+	return this->m_ToolScaleFactor;
+}
+
 
 void cToolManager::SelectTool(Tools _newTool) {
 	this->m_SelectedTool = _newTool;
@@ -91,6 +98,7 @@ void cToolManager::SelectTool(Tools _newTool) {
 	this->GetSelectedTool()->SetFillColor(this->m_ToolFillColour);
 	this->GetSelectedTool()->SetOutlineColor(this->m_ToolOutlineColor);
 	this->GetSelectedTool()->SetOutlineThickness(this->m_ToolOutlineThickness);
+	this->GetSelectedTool()->SetScaleFactor(this->m_ToolScaleFactor);
 }
 
 void cToolManager::SetFillColor(sf::Color _color) {
@@ -109,4 +117,9 @@ void cToolManager::SetOutlineColor(sf::Color _color) {
 void cToolManager::SetOutlineThickness(float _thickness) {
 	this->m_ToolOutlineThickness = _thickness;
 	this->GetSelectedTool()->SetOutlineThickness(_thickness);
+}
+
+void cToolManager::SetScaleFactor(float _scale) {
+	this->m_ToolScaleFactor = _scale;
+	this->GetSelectedTool()->SetScaleFactor(_scale);
 }

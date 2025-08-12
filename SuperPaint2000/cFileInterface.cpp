@@ -1,5 +1,10 @@
 #include "cFileInterface.h"
 
+cFileInterface::cFileInterface(cToolManager* _toolManager, sf::Vector2f _size) : cButton(_size) {
+    this->m_ToolManager = _toolManager;
+    this->m_Text = nullptr;
+}
+
 cFileInterface::cFileInterface(cToolManager* _toolManager, sf::Vector2f _size, std::string _text) : cButton(_size) {
     this->m_ToolManager = _toolManager;
 
@@ -13,6 +18,45 @@ cFileInterface::cFileInterface(cToolManager* _toolManager, sf::Vector2f _size, s
 
 cFileInterface::~cFileInterface() {
     delete(this->m_Text);
+}
+
+sf::Texture* cFileInterface::LoadFile() {
+    HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1DDE);
+
+    if (SUCCEEDED(hr)) {
+        IFileOpenDialog* pFileOpen;
+
+        // Create the FileOpenDialog object.
+        hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL, IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
+
+        if (SUCCEEDED(hr)) {
+            // Show the Open dialog box.
+            hr = pFileOpen->Show(NULL);
+
+            // Get the file name from the dialog box.
+            if (SUCCEEDED(hr)) {
+                IShellItem* pItem;
+                hr = pFileOpen->GetResult(&pItem);
+                if (SUCCEEDED(hr)) {
+                    PWSTR pszFilePath;
+                    hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFilePath);
+
+                    // Display the file name to the user.
+                    if (SUCCEEDED(hr)) {
+                        this->m_ImportedImageTexture = new sf::Texture(pszFilePath);
+                        return this->m_ImportedImageTexture;
+
+                        MessageBoxW(NULL, L"Image Loaded successfully.", L"Success!", MB_OK);
+                        CoTaskMemFree(pszFilePath);
+                    }
+
+                    pItem->Release();
+                }
+            }
+            pFileOpen->Release();
+        }
+        CoUninitialize();
+    }
 }
 
 void cFileInterface::LoadFile(cWindowManager* _window, cCanvas* _canvas) {
@@ -89,22 +133,4 @@ void cFileInterface::SaveFile(sf::RenderTexture* _canvasTexture) {
         }
         CoUninitialize();
     }
-}
-
-void cFileInterface::Select() {} // Removes Select() Functionality
-
-void cFileInterface::Unselect() {} // Removes Unselect() Functionality
-
-void cFileInterface::DrawButton(cWindowManager* _window, float _posY) {
-    // Calls DrawFunction Function from cButton Parent Class
-    cButton::DrawButton(_window, _posY);
-
-    // Extend Functionality
-    // Draws the Contents of the Button
-    // Draws Button Contents to the Center Position of Button Bounds
-    float fCenterBoundsX = this->m_Button.getPosition().x + (this->m_Button.getSize().x / 2);
-    float fCenterBoundsY = this->m_Button.getPosition().y + (this->m_Button.getSize().y / 2);
-    this->m_Text->setPosition(sf::Vector2f(fCenterBoundsX, fCenterBoundsY));
-
-    _window->m_ToolWindow.draw(*(this->m_Text));
 }

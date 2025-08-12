@@ -3,8 +3,9 @@
 #include "cButtonEllipse.h"
 #include "cButtonLine.h"
 #include "cButtonPolygon.h"
-#include "cButtonThicknessUp.h"
-#include "cButtonThicknessDown.h"
+#include "cButtonStamp.h"
+#include "cButtonSizeUp.h"
+#include "cButtonSizeDown.h"
 #include "cButtonLoadFile.h"
 #include "cButtonSaveFile.h"
 
@@ -13,17 +14,18 @@ private:
 	cWindowManager* m_Window;
 	cToolManager* m_ToolManager;
 
-	// Thickness Text
+	// Text
 	sf::Font m_Font;
-	sf::Text* m_TextThickness;
+	sf::Text* m_Text;
 
 	// Button Classes
 	cButtonRectangle* m_ButtonRectangle;
 	cButtonEllipse* m_ButtonEllipse;
 	cButtonLine* m_ButtonLine;
 	cButtonPolygon* m_ButtonPolygon;
-	cButtonThicknessUp* m_ButtonThicknessUp;
-	cButtonThicknessDown* m_ButtonThicknessDown;
+	cButtonStamp* m_ButtonStamp;
+	cButtonSizeUp* m_ButtonSizeUp;
+	cButtonSizeDown* m_ButtonSizeDown;
 	cButtonLoadFile* m_ButtonLoadFile;
 	cButtonSaveFile* m_ButtonSaveFile;
 

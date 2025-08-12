@@ -10,6 +10,9 @@ public:
 	~cButtonLoadFile();
 
 	// Overridden Functions
+	void Select() override; // Removes Select() Functionality
+	void Unselect() override; // Removes Unselect() Functionality
 	void UseButton() override;
+	void DrawButton(cWindowManager* _window, float _posY) override;
 };
 
