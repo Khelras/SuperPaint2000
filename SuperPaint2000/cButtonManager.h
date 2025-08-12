@@ -4,6 +4,8 @@
 #include "cButtonLine.h"
 #include "cButtonThicknessUp.h"
 #include "cButtonThicknessDown.h"
+#include "cButtonLoadFile.h"
+#include "cButtonSaveFile.h"
 
 class cButtonManager {
 private:
@@ -20,9 +22,11 @@ private:
 	cButtonLine* m_ButtonLine;
 	cButtonThicknessUp* m_ButtonThicknessUp;
 	cButtonThicknessDown* m_ButtonThicknessDown;
+	cButtonLoadFile* m_ButtonLoadFile;
+	cButtonSaveFile* m_ButtonSaveFile;
 
 public:
-	cButtonManager(cToolManager* _toolManager, cWindowManager* _window);
+	cButtonManager(cWindowManager* _window, cToolManager* _toolManager);
 	~cButtonManager();
 
 	void DrawButtons();

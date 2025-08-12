@@ -2,8 +2,9 @@
 
 cEventManager::cEventManager(cWindowManager* _window) {
     this->m_Window = _window;
+    this->m_WindowPosition = _window->getPosition();
     this->m_ToolManager = new cToolManager(this->m_Window);
-    this->m_ButtonManager = new cButtonManager(this->m_ToolManager, this->m_Window);
+    this->m_ButtonManager = new cButtonManager(this->m_Window, this->m_ToolManager);
 }
 
 cEventManager::~cEventManager() {
@@ -11,6 +12,7 @@ cEventManager::~cEventManager() {
     delete(this->m_ButtonManager);
 }
 
+// Event Processing
 void cEventManager::Process() {
     // Main Window Events
 	while (const std::optional eventMain = this->m_Window->pollEvent()) {
@@ -27,10 +29,16 @@ void cEventManager::Process() {
     this->ProcessRealtime();
 }
 
+// Main Window Events
 void cEventManager::ProcessEventMain(const std::optional<sf::Event> _event) {
     // Close Event
     if (_event->is<sf::Event::Closed>()) {
         this->m_Window->close();
+    }
+
+    // Resize Main Window Event
+    if (_event->is<sf::Event::Resized>()) {
+        this->m_Window->ResizeViewToWindow();
     }
 
     // Mouse Button Pressed Event
@@ -48,7 +56,13 @@ void cEventManager::ProcessEventMain(const std::optional<sf::Event> _event) {
     }
 }
 
+// Tool Window Events
 void cEventManager::ProcessEventTool(const std::optional<sf::Event> _event) {
+    // Resize Tool Window Event (Prevention)
+    if (_event->is<sf::Event::Resized>()) {
+        this->m_Window->PreventResizeToolWindow();
+    }
+
     // Mouse Button Pressed Event
     if (const auto* mousePressed = _event->getIf<sf::Event::MouseButtonPressed>()) {
         if (mousePressed->button == sf::Mouse::Button::Left) {
@@ -60,7 +74,14 @@ void cEventManager::ProcessEventTool(const std::optional<sf::Event> _event) {
     }
 }
 
+// Realtime Processing
 void cEventManager::ProcessRealtime() {
+    // When Main Window is Moved
+    if (this->m_Window->getPosition() != this->m_WindowPosition) {
+        this->m_WindowPosition = this->m_Window->getPosition(); // Sets new Position
+        this->m_Window->AutoMoveToolWindow(); // Auto Moves the Tool Window
+    }
+
     // Button Hovering
     if (this->m_ButtonManager->HasButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow))) {
         this->m_ButtonManager->HoverButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow));

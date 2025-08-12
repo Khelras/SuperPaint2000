@@ -26,12 +26,17 @@ private:
 public:
 	cToolManager(sf::RenderWindow* _window);
 	~cToolManager();
-
-	void SelectTool(Tools _newTool);
+	
+	// Getters
+	cCanvas* GetCanvas() const;
 	cTool* GetSelectedTool() const;
+	float GetOutlineThickness() const;
+
+	// Setters
+	void SelectTool(Tools _newTool);
 	void SetFillColor(sf::Color _color);
 	void SetOutlineColor(sf::Color _color);
 	void SetOutlineThickness(float _thickness);
-	float GetOutlineThickness() const;
+	
 };
 

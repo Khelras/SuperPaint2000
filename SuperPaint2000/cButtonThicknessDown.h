@@ -1,5 +1,4 @@
 #pragma once
-#include "cToolManager.h"
 #include "cButton.h"
 
 class cButtonThicknessDown : public cButton {

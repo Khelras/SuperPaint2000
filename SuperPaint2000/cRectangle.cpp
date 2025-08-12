@@ -56,6 +56,6 @@ void cRectangle::UseToolEnd() { // Completes the Draw Process
 }
 
 void cRectangle::Draw() {
-	this->m_Window->draw(this->m_Canvas->GetCanvasShape());
+	this->m_Window->draw(*(this->m_Canvas->GetCanvasShape()));
 	this->m_Window->draw(this->m_Tool);
 }

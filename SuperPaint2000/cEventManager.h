@@ -4,6 +4,7 @@
 class cEventManager {
 private:
 	cWindowManager* m_Window;
+	sf::Vector2i m_WindowPosition;
 	cToolManager* m_ToolManager;
 	cButtonManager* m_ButtonManager;
 

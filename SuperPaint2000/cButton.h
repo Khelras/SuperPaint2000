@@ -1,5 +1,6 @@
 #pragma once
 #include "cWindowManager.h"
+#include "cToolManager.h"
 
 class cButton {
 private:

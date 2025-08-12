@@ -1,7 +1,7 @@
 #include "cButtonManager.h"
 #include <string>
 
-cButtonManager::cButtonManager(cToolManager* _toolManager, cWindowManager* _window) {
+cButtonManager::cButtonManager(cWindowManager* _window, cToolManager* _toolManager) {
 	this->m_Window = _window;
 	this->m_ToolManager = _toolManager;
 	
@@ -11,7 +11,7 @@ cButtonManager::cButtonManager(cToolManager* _toolManager, cWindowManager* _wind
 	int iThickness = this->m_ToolManager->GetOutlineThickness();
 	this->m_TextThickness->setString(std::to_string(iThickness) + "px");
 	this->m_TextThickness->setOrigin(this->m_TextThickness->getGlobalBounds().getCenter());
-	this->m_TextThickness->setPosition(sf::Vector2f(this->m_Window->m_ToolWindow.getSize().x / 2.0f, this->m_Window->m_ToolWindow.getSize().y - 95.0f));
+	this->m_TextThickness->setPosition(sf::Vector2f(this->m_Window->m_ToolWindow.getSize().x / 2.0f, this->m_Window->m_ToolWindow.getSize().y - 195.0f));
 	this->m_TextThickness->setFillColor(sf::Color::Black);
 
 	// Buttons
@@ -20,6 +20,8 @@ cButtonManager::cButtonManager(cToolManager* _toolManager, cWindowManager* _wind
 	this->m_ButtonLine = new cButtonLine(_toolManager, sf::Vector2f(50.0f, 50.0f));
 	this->m_ButtonThicknessUp = new cButtonThicknessUp(_toolManager, sf::Vector2f(50.0f, 50.0f));
 	this->m_ButtonThicknessDown = new cButtonThicknessDown(_toolManager, sf::Vector2f(50.0f, 50.0f));
+	this->m_ButtonLoadFile = new cButtonLoadFile(_window, _toolManager, sf::Vector2f(75.0f, 50.0f));
+	this->m_ButtonSaveFile = new cButtonSaveFile(_toolManager, sf::Vector2f(75.0f, 50.0f));
 
 	// Pre-Selects Rectangle Tool
 	this->m_ButtonRectangle->Select();
@@ -32,6 +34,8 @@ cButtonManager::~cButtonManager() {
 	delete(this->m_ButtonLine);
 	delete(this->m_ButtonThicknessUp);
 	delete(this->m_ButtonThicknessDown);
+	delete(this->m_ButtonLoadFile);
+	delete(this->m_ButtonSaveFile);
 }
 
 void cButtonManager::DrawButtons() {
@@ -42,8 +46,10 @@ void cButtonManager::DrawButtons() {
 	this->m_ButtonRectangle->DrawButton(this->m_Window, 25.0f);
 	this->m_ButtonEllipse->DrawButton(this->m_Window, 75.0f);
 	this->m_ButtonLine->DrawButton(this->m_Window, 125.0f);
-	this->m_ButtonThicknessUp->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 175.0f);
-	this->m_ButtonThicknessDown->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 75.0f);
+	this->m_ButtonThicknessUp->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 275.0f);
+	this->m_ButtonThicknessDown->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 175.0f);
+	this->m_ButtonLoadFile->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 125.0f);
+	this->m_ButtonSaveFile->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 75.0f);
 }
 
 bool cButtonManager::HasButton(sf::Vector2i _mousePos) {
@@ -65,6 +71,14 @@ bool cButtonManager::HasButton(sf::Vector2i _mousePos) {
 	}
 	// If Mouse Position is over the Thickness Down Button
 	else if (this->m_ButtonThicknessDown->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
+		return true;
+	}
+	// If Mouse Position is over the Thickness Up Button
+	else if (this->m_ButtonLoadFile->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
+		return true;
+	}
+	// If Mouse Position is over the Thickness Down Button
+	else if (this->m_ButtonSaveFile->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
 		return true;
 	}
 	// If Mouse Position is NOT over a Button
@@ -94,6 +108,14 @@ cButton* cButtonManager::GetButton(sf::Vector2i _mousePos) {
 	else if (this->m_ButtonThicknessDown->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
 		return this->m_ButtonThicknessDown;
 	}
+	// If Mouse Position is over the Thickness Up Button
+	else if (this->m_ButtonLoadFile->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
+		return this->m_ButtonLoadFile;
+	}
+	// If Mouse Position is over the Thickness Down Button
+	else if (this->m_ButtonSaveFile->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
+		return this->m_ButtonSaveFile;
+	}
 	// If Mouse Position is NOT over a Button
 	else {
 		return nullptr;
@@ -106,6 +128,8 @@ void cButtonManager::RemoveHovers() { // Removes all Hovers
 	this->m_ButtonLine->RemoveHover();
 	this->m_ButtonThicknessUp->RemoveHover();
 	this->m_ButtonThicknessDown->RemoveHover();
+	this->m_ButtonLoadFile->RemoveHover();
+	this->m_ButtonSaveFile->RemoveHover();
 }
 
 void cButtonManager::UnselectButtons() { // Unselects all Buttons
@@ -114,6 +138,8 @@ void cButtonManager::UnselectButtons() { // Unselects all Buttons
 	this->m_ButtonLine->Unselect();
 	this->m_ButtonThicknessUp->Unselect();
 	this->m_ButtonThicknessDown->Unselect();
+	this->m_ButtonLoadFile->Unselect();
+	this->m_ButtonSaveFile->Unselect();
 }
 
 void cButtonManager::HoverButton(sf::Vector2i _mousePos) {

@@ -3,8 +3,8 @@
 
 class cCanvas {
 private:
-	sf::RectangleShape m_CanvasShape;
-	sf::RenderTexture m_CanvasTexture;
+	sf::RectangleShape* m_CanvasShape;
+	sf::RenderTexture* m_CanvasTexture;
 	sf::Color m_CanvasColor;
 
 public:
@@ -12,8 +12,10 @@ public:
 	~cCanvas();
 
 	void Draw(sf::Drawable& _shape);
+	void Clear();
 
 	// Getters
-	sf::RectangleShape GetCanvasShape() const;
+	sf::RectangleShape* GetCanvasShape() const;
+	sf::RenderTexture* GetCanvasTexture() const;
 };
 

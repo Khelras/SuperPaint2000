@@ -30,7 +30,6 @@ void cButtonThicknessUp::DrawButton(cWindowManager* _window, float _posY) {
 	// Draws Button Contents to the Center Position of Button Bounds
 	float fCenterBoundsX = this->m_Button.getPosition().x + (this->m_Button.getSize().x / 2);
 	float fCenterBoundsY = this->m_Button.getPosition().y + (this->m_Button.getSize().y / 2);
-	float fOffset = this->m_ButtonShape.getRadius();
 	this->m_ButtonShape.setPosition(sf::Vector2f(fCenterBoundsX, fCenterBoundsY));
 
 	_window->m_ToolWindow.draw(this->m_ButtonShape);

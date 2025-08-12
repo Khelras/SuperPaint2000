@@ -61,7 +61,7 @@ void cLine::UseToolEnd() { // Completes the Draw Process
 }
 
 void cLine::Draw() {
-	this->m_Window->draw(this->m_Canvas->GetCanvasShape());
+	this->m_Window->draw(*(this->m_Canvas->GetCanvasShape()));
 	this->m_Window->draw(this->m_Tool);
 }
 

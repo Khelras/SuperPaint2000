@@ -28,13 +28,8 @@ cToolManager::~cToolManager() {
 	delete(this->m_ToolLine);
 }
 
-void cToolManager::SelectTool(Tools _newTool) {
-	this->m_SelectedTool = _newTool;
-
-	// Applies the current tool settings onto the newly selected tool
-	this->GetSelectedTool()->SetFillColor(this->m_ToolFillColour);
-	this->GetSelectedTool()->SetOutlineColor(this->m_ToolOutlineColor);
-	this->GetSelectedTool()->SetOutlineThickness(this->m_ToolOutlineThickness);
+cCanvas* cToolManager::GetCanvas() const {
+	return this->m_Canvas;
 }
 
 cTool* cToolManager::GetSelectedTool() const {
@@ -52,7 +47,7 @@ cTool* cToolManager::GetSelectedTool() const {
 			break;
 		}
 
-		// Line Tool
+		 // Line Tool
 		case (Tools::TOOL_LINE): {
 			return this->m_ToolLine;
 			break;
@@ -64,6 +59,20 @@ cTool* cToolManager::GetSelectedTool() const {
 			break;
 		}
 	}
+}
+
+float cToolManager::GetOutlineThickness() const {
+	return this->m_ToolOutlineThickness;
+}
+
+
+void cToolManager::SelectTool(Tools _newTool) {
+	this->m_SelectedTool = _newTool;
+
+	// Applies the current tool settings onto the newly selected tool
+	this->GetSelectedTool()->SetFillColor(this->m_ToolFillColour);
+	this->GetSelectedTool()->SetOutlineColor(this->m_ToolOutlineColor);
+	this->GetSelectedTool()->SetOutlineThickness(this->m_ToolOutlineThickness);
 }
 
 void cToolManager::SetFillColor(sf::Color _color) {
@@ -82,8 +91,4 @@ void cToolManager::SetOutlineColor(sf::Color _color) {
 void cToolManager::SetOutlineThickness(float _thickness) {
 	this->m_ToolOutlineThickness = _thickness;
 	this->GetSelectedTool()->SetOutlineThickness(_thickness);
-}
-
-float cToolManager::GetOutlineThickness() const {
-	return this->m_ToolOutlineThickness;
 }

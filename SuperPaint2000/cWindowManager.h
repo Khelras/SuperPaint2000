@@ -1,8 +1,11 @@
 #pragma once
 #include <string>
-#include "SFML/Graphics.hpp"
+#include "cCanvas.h"
 
 class cWindowManager : public sf::RenderWindow {
+private:
+	sf::Vector2u m_ToolWindowSize;
+
 public:
 	sf::RenderWindow m_ToolWindow;
 
@@ -10,4 +13,8 @@ public:
 	~cWindowManager();
 
 	void Process();
+	void AutoMoveToolWindow();
+	void ResizeViewToWindow();
+	void PreventResizeToolWindow();
+	void ImportImage(sf::Texture _importedImageTexture, cCanvas* _canvas);
 };
