@@ -141,6 +141,7 @@
     <ClCompile Include="cButtonEllipse.cpp" />
     <ClCompile Include="cButtonLine.cpp" />
     <ClCompile Include="cButtonLoadFile.cpp" />
+    <ClCompile Include="cButtonPolygon.cpp" />
     <ClCompile Include="cButtonRectangle.cpp" />
     <ClCompile Include="cButtonManager.cpp" />
     <ClCompile Include="cButtonSaveFile.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="cEventManager.cpp" />
     <ClCompile Include="cFileInterface.cpp" />
     <ClCompile Include="cLine.cpp" />
+    <ClCompile Include="cPolygon.cpp" />
     <ClCompile Include="cRectangle.cpp" />
     <ClCompile Include="cTool.cpp" />
     <ClCompile Include="cWindowManager.cpp" />
@@ -162,6 +164,7 @@
     <ClInclude Include="cButtonEllipse.h" />
     <ClInclude Include="cButtonLine.h" />
     <ClInclude Include="cButtonLoadFile.h" />
+    <ClInclude Include="cButtonPolygon.h" />
     <ClInclude Include="cButtonRectangle.h" />
     <ClInclude Include="cButtonManager.h" />
     <ClInclude Include="cButtonSaveFile.h" />
@@ -172,6 +175,7 @@
     <ClInclude Include="cEventManager.h" />
     <ClInclude Include="cFileInterface.h" />
     <ClInclude Include="cLine.h" />
+    <ClInclude Include="cPolygon.h" />
     <ClInclude Include="cRectangle.h" />
     <ClInclude Include="cTool.h" />
     <ClInclude Include="cToolManager.h" />

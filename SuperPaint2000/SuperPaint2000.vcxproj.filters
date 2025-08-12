@@ -90,6 +90,12 @@
     <ClCompile Include="cButtonLoadFile.cpp">
       <Filter>Source Files\Buttons</Filter>
     </ClCompile>
+    <ClCompile Include="cPolygon.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="cButtonPolygon.cpp">
+      <Filter>Source Files\Buttons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cTool.h">
@@ -144,6 +150,12 @@
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="cButtonSaveFile.h">
+      <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cPolygon.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="cButtonPolygon.h">
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
   </ItemGroup>

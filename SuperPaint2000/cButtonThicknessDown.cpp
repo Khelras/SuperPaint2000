@@ -1,6 +1,7 @@
 #include "cButtonThicknessDown.h"
 
 cButtonThicknessDown::cButtonThicknessDown(cToolManager* _toolManager, sf::Vector2f _size) : cButton(_size) {
+	this->m_CanSelect = false;
 	this->m_ToolManager = _toolManager;
 	this->m_ButtonShape.setRadius(15.0f);
 	this->m_ButtonShape.setFillColor(sf::Color::Black);

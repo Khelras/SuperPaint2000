@@ -43,15 +43,25 @@ void cEventManager::ProcessEventMain(const std::optional<sf::Event> _event) {
 
     // Mouse Button Pressed Event
     if (const auto* mousePressed = _event->getIf<sf::Event::MouseButtonPressed>()) {
+        // Left Mouse Button
         if (mousePressed->button == sf::Mouse::Button::Left) {
             this->m_ToolManager->GetSelectedTool()->UseToolOnce();
+        }
+
+        // Right Mouse Button
+        if (mousePressed->button == sf::Mouse::Button::Right) {
+            if (this->m_ToolManager->GetSelectedToolEnum() == Tools::TOOL_POLYGON) {
+                this->m_ToolManager->GetSelectedTool()->UseToolEnd();
+            }
         }
     }
 
     // Mouse Button Released Event
     if (const auto* mouseReleased = _event->getIf<sf::Event::MouseButtonReleased>()) {
         if (mouseReleased->button == sf::Mouse::Button::Left) {
-            this->m_ToolManager->GetSelectedTool()->UseToolEnd();
+            if (this->m_ToolManager->GetSelectedToolEnum() != Tools::TOOL_POLYGON) {
+                this->m_ToolManager->GetSelectedTool()->UseToolEnd();
+            }
         }
     }
 }
@@ -67,7 +77,7 @@ void cEventManager::ProcessEventTool(const std::optional<sf::Event> _event) {
     if (const auto* mousePressed = _event->getIf<sf::Event::MouseButtonPressed>()) {
         if (mousePressed->button == sf::Mouse::Button::Left) {
             // If a Button Exists at Mouse Position
-            if (this->m_ButtonManager->HasButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow)) == true) {
+            if (this->m_ButtonManager->GetButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow)) != nullptr) {
                 this->m_ButtonManager->ClickButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow));
             }
         }
@@ -83,7 +93,7 @@ void cEventManager::ProcessRealtime() {
     }
 
     // Button Hovering
-    if (this->m_ButtonManager->HasButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow))) {
+    if (this->m_ButtonManager->GetButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow)) != nullptr) {
         this->m_ButtonManager->HoverButton(sf::Mouse::getPosition(this->m_Window->m_ToolWindow));
     }
     else { // Remove Hovers

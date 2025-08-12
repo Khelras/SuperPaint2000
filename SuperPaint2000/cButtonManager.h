@@ -2,6 +2,7 @@
 #include "cButtonRectangle.h"
 #include "cButtonEllipse.h"
 #include "cButtonLine.h"
+#include "cButtonPolygon.h"
 #include "cButtonThicknessUp.h"
 #include "cButtonThicknessDown.h"
 #include "cButtonLoadFile.h"
@@ -20,6 +21,7 @@ private:
 	cButtonRectangle* m_ButtonRectangle;
 	cButtonEllipse* m_ButtonEllipse;
 	cButtonLine* m_ButtonLine;
+	cButtonPolygon* m_ButtonPolygon;
 	cButtonThicknessUp* m_ButtonThicknessUp;
 	cButtonThicknessDown* m_ButtonThicknessDown;
 	cButtonLoadFile* m_ButtonLoadFile;
@@ -30,7 +32,6 @@ public:
 	~cButtonManager();
 
 	void DrawButtons();
-	bool HasButton(sf::Vector2i _mousePos);
 	cButton* GetButton(sf::Vector2i _mousePos);
 	void RemoveHovers();
 	void UnselectButtons();

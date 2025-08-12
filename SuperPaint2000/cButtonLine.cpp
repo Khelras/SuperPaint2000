@@ -1,6 +1,7 @@
 #include "cButtonLine.h"
 
 cButtonLine::cButtonLine(cToolManager* _toolManager, sf::Vector2f _size) : cButton(_size) {
+	this->m_CanSelect = true;
 	this->m_ToolManager = _toolManager;
 	this->m_ButtonShape.setSize(sf::Vector2f(0.0f, 40.0f));
 	this->m_ButtonShape.setFillColor(sf::Color::Transparent);

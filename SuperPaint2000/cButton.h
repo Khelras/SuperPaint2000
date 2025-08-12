@@ -7,6 +7,7 @@ private:
 	bool m_IsSelected;
 
 public:
+	bool m_CanSelect; // Allows for Selection Visuals when Button is Pressed
 	sf::RectangleShape m_Button;
 
 	cButton(sf::Vector2f _size);

@@ -1,6 +1,5 @@
 #include "cWindowManager.h"
 #include "cEventManager.h"
-#include <iostream>
 
 cWindowManager::cWindowManager(sf::VideoMode _mode, std::string _name) {
 	this->create(_mode, _name);
@@ -63,8 +62,4 @@ void cWindowManager::ImportImage(sf::Texture _importedImageTexture, cCanvas* _ca
 
     // Finally Displays the Canvas Image
     _canvas->GetCanvasTexture()->display();
-    std::cout << "IMAGE x: " << _importedImageTexture.getSize().x << " y: " << _importedImageTexture.getSize().y << std::endl;
-    std::cout << "WINDOW x: " << this->getSize().x << " y: " << this->getSize().y << std::endl;
-    std::cout << "CANVAS-SHAPE x: " << _canvas->GetCanvasShape()->getSize().x << " y: " << _canvas->GetCanvasShape()->getSize().y << std::endl;
-    std::cout << "CANVAS-TEXTURE x: " << _canvas->GetCanvasTexture()->getSize().x << " y: " << _canvas->GetCanvasTexture()->getSize().y << std::endl;
 }

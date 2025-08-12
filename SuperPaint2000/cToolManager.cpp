@@ -14,6 +14,7 @@ cToolManager::cToolManager(sf::RenderWindow* _window) {
 	this->m_ToolRectangle = new cRectangle(this->m_Window, this->m_Canvas);
 	this->m_ToolEllipse = new cEllipse(this->m_Window, this->m_Canvas);
 	this->m_ToolLine = new cLine(this->m_Window, this->m_Canvas);
+	this->m_ToolPolygon = new cPolygon(this->m_Window, this->m_Canvas);
 
 	// Applies Default Settings onto Selected Tool
 	this->GetSelectedTool()->SetFillColor(this->m_ToolFillColour);
@@ -26,6 +27,7 @@ cToolManager::~cToolManager() {
 	delete(this->m_ToolRectangle);
 	delete(this->m_ToolEllipse);
 	delete(this->m_ToolLine);
+	delete(this->m_ToolPolygon);
 }
 
 cCanvas* cToolManager::GetCanvas() const {
@@ -53,12 +55,28 @@ cTool* cToolManager::GetSelectedTool() const {
 			break;
 		}
 
+		// Line Tool
+		case (Tools::TOOL_POLYGON): {
+			return this->m_ToolPolygon;
+			break;
+		}
+
+		// Line Tool
+		case (Tools::TOOL_STAMP): {
+
+			break;
+		}
+
 		// Default
 		default: {
 			return nullptr;
 			break;
 		}
 	}
+}
+
+Tools cToolManager::GetSelectedToolEnum() const {
+	return this->m_SelectedTool;
 }
 
 float cToolManager::GetOutlineThickness() const {

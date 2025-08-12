@@ -2,11 +2,14 @@
 #include "cRectangle.h"
 #include "cEllipse.h"
 #include "cLine.h"
+#include "cPolygon.h"
 
 enum Tools {
 	TOOL_RECTANGLE,   // Rectangle Tool
 	TOOL_ELLIPSE,     // Ellipse Tool
-	TOOL_LINE         // Line Tool
+	TOOL_LINE,        // Line Tool
+	TOOL_POLYGON,     // Polygon Tool
+	TOOL_STAMP        // Stamp Tool
 };
 
 class cToolManager {
@@ -22,6 +25,7 @@ private:
 	cRectangle* m_ToolRectangle;
 	cEllipse* m_ToolEllipse;
 	cLine* m_ToolLine;
+	cPolygon* m_ToolPolygon;
 
 public:
 	cToolManager(sf::RenderWindow* _window);
@@ -30,6 +34,7 @@ public:
 	// Getters
 	cCanvas* GetCanvas() const;
 	cTool* GetSelectedTool() const;
+	Tools GetSelectedToolEnum() const;
 	float GetOutlineThickness() const;
 
 	// Setters

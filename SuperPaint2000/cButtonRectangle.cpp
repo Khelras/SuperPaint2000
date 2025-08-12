@@ -1,6 +1,7 @@
 #include "cButtonRectangle.h"
 
 cButtonRectangle::cButtonRectangle(cToolManager* _toolManager, sf::Vector2f _size) : cButton(_size) {
+	this->m_CanSelect = true;
 	this->m_ToolManager = _toolManager;
 	this->m_ButtonShape.setSize(sf::Vector2f(30.0f, 20.0f));
 	this->m_ButtonShape.setFillColor(sf::Color::Transparent);
