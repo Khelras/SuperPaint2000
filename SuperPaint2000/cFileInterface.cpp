@@ -31,6 +31,22 @@ sf::Texture* cFileInterface::LoadFile() {
         // Create the FileOpenDialog object.
         hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL, IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
 
+        // File Filters
+        LPCWSTR PNG = L"png Files";
+        LPCWSTR JPG = L"jpg/jpeg Files";
+        LPCWSTR BMP = L"bmp Files";
+        LPCWSTR ALL = L"All Files";
+
+        COMDLG_FILTERSPEC FileFilter[] = {
+            { PNG, L"*.png" },
+            { JPG, L"*.jpg; *.jpeg" },
+            { BMP, L"*.bmp"},
+            { ALL, L"*.*" }
+        };
+
+        pFileOpen->SetFileTypes(4, FileFilter);
+        pFileOpen->SetDefaultExtension(L"png");
+
         if (SUCCEEDED(hr)) {
             // Show the Open dialog box.
             hr = pFileOpen->Show(NULL);
@@ -70,6 +86,7 @@ void cFileInterface::LoadFile(cWindowManager* _window, cCanvas* _canvas) {
         // Create the FileOpenDialog object.
         hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL, IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
 
+        // File Filters
         LPCWSTR PNG = L"png Files";
         LPCWSTR JPG = L"jpg/jpeg Files";
         LPCWSTR BMP = L"bmp Files";
@@ -124,6 +141,7 @@ void cFileInterface::SaveFile(sf::RenderTexture* _canvasTexture) {
         // Create the FileOpenDialog object.
         hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_ALL, IID_IFileSaveDialog, reinterpret_cast<void**>(&pFileSave));
 
+        // File Filters
         LPCWSTR PNG = L"png Files";
         LPCWSTR JPG = L"jpg/jpeg Files";
         LPCWSTR BMP = L"bmp Files";

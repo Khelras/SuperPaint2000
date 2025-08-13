@@ -138,6 +138,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cButton.cpp" />
+    <ClCompile Include="cButtonApply.cpp" />
+    <ClCompile Include="cButtonCancel.cpp" />
+    <ClCompile Include="cButtonColor.cpp" />
     <ClCompile Include="cButtonEllipse.cpp" />
     <ClCompile Include="cButtonLine.cpp" />
     <ClCompile Include="cButtonLoadFile.cpp" />
@@ -149,6 +152,10 @@
     <ClCompile Include="cButtonSizeDown.cpp" />
     <ClCompile Include="cButtonSizeUp.cpp" />
     <ClCompile Include="cCanvas.cpp" />
+    <ClCompile Include="cColorBox.cpp" />
+    <ClCompile Include="cColorBoxBG.cpp" />
+    <ClCompile Include="cColorBoxFG.cpp" />
+    <ClCompile Include="cColorPickerManager.cpp" />
     <ClCompile Include="cEllipse.cpp" />
     <ClCompile Include="cEventManager.cpp" />
     <ClCompile Include="cFileInterface.cpp" />
@@ -163,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cButton.h" />
+    <ClInclude Include="cButtonApply.h" />
+    <ClInclude Include="cButtonCancel.h" />
+    <ClInclude Include="cButtonColor.h" />
     <ClInclude Include="cButtonEllipse.h" />
     <ClInclude Include="cButtonLine.h" />
     <ClInclude Include="cButtonLoadFile.h" />
@@ -174,6 +184,10 @@
     <ClInclude Include="cButtonSizeDown.h" />
     <ClInclude Include="cButtonSizeUp.h" />
     <ClInclude Include="cCanvas.h" />
+    <ClInclude Include="cColorBox.h" />
+    <ClInclude Include="cColorBoxBG.h" />
+    <ClInclude Include="cColorBoxFG.h" />
+    <ClInclude Include="cColorPickerManager.h" />
     <ClInclude Include="cEllipse.h" />
     <ClInclude Include="cEventManager.h" />
     <ClInclude Include="cFileInterface.h" />

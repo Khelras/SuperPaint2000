@@ -82,6 +82,15 @@ Tools cToolManager::GetSelectedToolEnum() const {
 	return this->m_SelectedTool;
 }
 
+sf::Color cToolManager::GetFillColor() const {
+	return this->m_ToolFillColour;
+}
+
+sf::Color cToolManager::GetOutlineColor() const
+{
+	return this->m_ToolOutlineColor;
+}
+
 float cToolManager::GetOutlineThickness() const {
 	return this->m_ToolOutlineThickness;
 }

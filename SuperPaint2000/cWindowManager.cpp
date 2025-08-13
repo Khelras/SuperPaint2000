@@ -4,12 +4,15 @@
 cWindowManager::cWindowManager(sf::VideoMode _mode, std::string _name) {
 	this->create(_mode, _name);
     this->setFramerateLimit(60);
+    this->ShouldApplyColor = false;
 
     // Tool Window + Auto Moves to the Right of Main Window
     this->m_ToolWindowSize = sf::Vector2u(100, 700);
-    this->m_ToolWindow.create(sf::VideoMode(this->m_ToolWindowSize), "Super Tools 2000!");
-    this->AutoMoveToolWindow();
+    this->OpenWindow(Windows::WINDOW_TOOL);
     this->m_ToolWindow.setFramerateLimit(60);
+
+    // Colour Picker Windows
+    this->m_ColorPickerWindowSize = sf::Vector2u(306, 512);
 }
 
 cWindowManager::~cWindowManager() {
@@ -25,6 +28,19 @@ void cWindowManager::Process() {
     }
 
     delete(EventManager);
+}
+
+void cWindowManager::OpenWindow(Windows _windowType) {
+    if (_windowType == Windows::WINDOW_TOOL) {
+        this->m_ToolWindow.create(sf::VideoMode(this->m_ToolWindowSize), "Super Tools 2000!", sf::Style::Titlebar);
+        this->AutoMoveToolWindow();
+    }
+    else if (_windowType == Windows::WINDOW_COLOR_FG) {
+        this->m_ColorPickerFGWindow.create(sf::VideoMode(this->m_ColorPickerWindowSize), "Super Color Picker (Foreground) 2000!", sf::Style::Titlebar);
+    }
+    else if (_windowType == Windows::WINDOW_COLOR_BG) {
+        this->m_ColorPickerBGWindow.create(sf::VideoMode(this->m_ColorPickerWindowSize), "Super Color Picker (Background) 2000!", sf::Style::Titlebar);
+    }
 }
 
 void cWindowManager::AutoMoveToolWindow() {
@@ -62,4 +78,14 @@ void cWindowManager::ImportImage(sf::Texture _importedImageTexture, cCanvas* _ca
 
     // Finally Displays the Canvas Image
     _canvas->GetCanvasTexture()->display();
+}
+
+bool cWindowManager::IsColorPickerOpen() const {
+    // If EITHER Color Picker is Open
+    if (this->m_ColorPickerFGWindow.isOpen() || this->m_ColorPickerBGWindow.isOpen()) {
+        return true; // A Color Picker Window is Open
+    }
+    else {
+        return false;
+    }
 }

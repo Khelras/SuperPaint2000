@@ -38,6 +38,8 @@ public:
 	cCanvas* GetCanvas() const;
 	cTool* GetSelectedTool() const;
 	Tools GetSelectedToolEnum() const;
+	sf::Color GetFillColor() const;
+	sf::Color GetOutlineColor() const;
 	float GetOutlineThickness() const;
 	float GetScaleFactor() const;
 

@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Buttons">
       <UniqueIdentifier>{594535bc-643f-4b08-8ca7-bb13a5d2ebf3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Buttons\Color Picker Buttons">
+      <UniqueIdentifier>{30924f92-6021-4011-9c89-47867202f10d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Buttons\Color Picker Buttons">
+      <UniqueIdentifier>{42da7684-115d-4b97-a85f-81a9c12b76c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -102,6 +108,27 @@
     <ClCompile Include="cStamp.cpp">
       <Filter>Source Files\Tools</Filter>
     </ClCompile>
+    <ClCompile Include="cButtonCancel.cpp">
+      <Filter>Source Files\Buttons\Color Picker Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cButtonApply.cpp">
+      <Filter>Source Files\Buttons\Color Picker Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cColorBox.cpp">
+      <Filter>Source Files\Buttons\Color Picker Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cColorBoxBG.cpp">
+      <Filter>Source Files\Buttons\Color Picker Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cColorBoxFG.cpp">
+      <Filter>Source Files\Buttons\Color Picker Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cButtonColor.cpp">
+      <Filter>Source Files\Buttons\Color Picker Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="cColorPickerManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cTool.h">
@@ -169,6 +196,27 @@
     </ClInclude>
     <ClInclude Include="cStamp.h">
       <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="cButtonCancel.h">
+      <Filter>Header Files\Buttons\Color Picker Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cButtonApply.h">
+      <Filter>Header Files\Buttons\Color Picker Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cColorBoxFG.h">
+      <Filter>Header Files\Buttons\Color Picker Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cColorBox.h">
+      <Filter>Header Files\Buttons\Color Picker Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cColorBoxBG.h">
+      <Filter>Header Files\Buttons\Color Picker Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cButtonColor.h">
+      <Filter>Header Files\Buttons\Color Picker Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="cColorPickerManager.h">
+      <Filter>Header Files\Managers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

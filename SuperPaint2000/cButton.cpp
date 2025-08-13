@@ -2,6 +2,7 @@
 
 cButton::cButton(sf::Vector2f _size) {
 	this->m_IsSelected = false;
+	this->m_CanSelect = true;
 
 	// Button
 	this->m_Button.setSize(_size);

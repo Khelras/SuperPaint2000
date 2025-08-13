@@ -1,5 +1,4 @@
 #include "cButtonManager.h"
-#include <string>
 
 cButtonManager::cButtonManager(cWindowManager* _window, cToolManager* _toolManager) {
 	this->m_Window = _window;
@@ -14,6 +13,18 @@ cButtonManager::cButtonManager(cWindowManager* _window, cToolManager* _toolManag
 	this->m_Text->setPosition(sf::Vector2f(this->m_Window->m_ToolWindow.getSize().x / 2.0f, this->m_Window->m_ToolWindow.getSize().y - 195.0f));
 	this->m_Text->setFillColor(sf::Color::Black);
 
+	// Normal Texture
+	if (this->m_NormalImage.loadFromFile("images/normal.jpg") == false)
+		printf("ERR: Unable to Load Image!\n"); // FOR DEBUGGING
+	if (this->m_NormalTexture.loadFromImage(this->m_NormalImage) == false)
+		printf("ERR: Unable to Load Image onto Texture!\n"); // FOR DEBUGGING
+
+	// Transparent Texture
+	if (this->m_TransparentImage.loadFromFile("images/transparent.jpg") == false)
+		printf("ERR: Unable to Load Image!\n"); // FOR DEBUGGING
+	if (this->m_TransparentTexture.loadFromImage(this->m_TransparentImage) == false)
+		printf("ERR: Unable to Load Image onto Texture!\n"); // FOR DEBUGGING
+
 	// Buttons
 	this->m_ButtonRectangle = new cButtonRectangle(_toolManager, sf::Vector2f(50.0f, 50.0f));
 	this->m_ButtonEllipse = new cButtonEllipse(_toolManager, sf::Vector2f(50.0f, 50.0f));
@@ -24,6 +35,8 @@ cButtonManager::cButtonManager(cWindowManager* _window, cToolManager* _toolManag
 	this->m_ButtonSizeDown = new cButtonSizeDown(_toolManager, sf::Vector2f(50.0f, 50.0f));
 	this->m_ButtonLoadFile = new cButtonLoadFile(_window, _toolManager, sf::Vector2f(75.0f, 50.0f));
 	this->m_ButtonSaveFile = new cButtonSaveFile(_toolManager, sf::Vector2f(75.0f, 50.0f));
+	this->m_ColorBoxFG = new cColorBoxFG(_window, _toolManager, sf::Vector2f(40.0f, 40.0f));
+	this->m_ColorBoxBG = new cColorBoxBG(_window, _toolManager, sf::Vector2f(40.0f, 40.0f));
 
 	// Pre-Selects Rectangle Tool
 	this->m_ButtonRectangle->Select();
@@ -40,6 +53,8 @@ cButtonManager::~cButtonManager() {
 	delete(this->m_ButtonSizeDown);
 	delete(this->m_ButtonLoadFile);
 	delete(this->m_ButtonSaveFile);
+	delete(this->m_ColorBoxFG);
+	delete(this->m_ColorBoxBG);
 }
 
 void cButtonManager::DrawButtons() {
@@ -70,12 +85,35 @@ void cButtonManager::DrawButtons() {
 	this->m_Text->setFillColor(sf::Color::Black);
 	this->m_Window->m_ToolWindow.draw(*(this->m_Text)); // Draws Text
 
+	// Update Color FG Box
+	if (this->m_ToolManager->GetFillColor() == sf::Color::Transparent) { // Fill Color Transparent
+		this->m_ColorBoxFG->m_ButtonShape.setTexture(&(this->m_TransparentTexture));
+		this->m_ColorBoxFG->m_ButtonShape.setFillColor(sf::Color::White);
+	}
+	else { // Fill Color NOT Transparent
+		this->m_ColorBoxFG->m_ButtonShape.setTexture(&(this->m_NormalTexture));
+		this->m_ColorBoxFG->m_ButtonShape.setFillColor(this->m_ToolManager->GetFillColor());
+	}
+
+	// Update Color BG Box
+	if (this->m_ToolManager->GetOutlineColor() == sf::Color::Transparent) { // Outline Color Transparent
+		this->m_ColorBoxBG->m_ButtonShape.setTexture(&(this->m_TransparentTexture));
+		this->m_ColorBoxBG->m_ButtonShape.setFillColor(sf::Color::White);
+	}
+	else { // Outline Color NOT Transparent
+		this->m_ColorBoxBG->m_ButtonShape.setTexture(&(this->m_NormalTexture));
+		this->m_ColorBoxBG->m_ButtonShape.setFillColor(this->m_ToolManager->GetOutlineColor());
+	}
+		
+
 	// Buttons
 	this->m_ButtonRectangle->DrawButton(this->m_Window, 25.0f);
 	this->m_ButtonEllipse->DrawButton(this->m_Window, 75.0f);
 	this->m_ButtonLine->DrawButton(this->m_Window, 125.0f);
 	this->m_ButtonPolygon->DrawButton(this->m_Window, 175.0f);
 	this->m_ButtonStamp->DrawButton(this->m_Window, 225.0f);
+	this->m_ColorBoxBG->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 340.0f);
+	this->m_ColorBoxFG->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 340.0f);
 	this->m_ButtonSizeUp->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 275.0f);
 	this->m_ButtonSizeDown->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 175.0f);
 	this->m_ButtonLoadFile->DrawButton(this->m_Window, this->m_Window->m_ToolWindow.getSize().y - 125.0f);
@@ -119,6 +157,14 @@ cButton* cButtonManager::GetButton(sf::Vector2i _mousePos) {
 	else if (this->m_ButtonSaveFile->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
 		return this->m_ButtonSaveFile;
 	}
+	// If Mouse Position is over the Color Picker Foreground Button
+	else if (this->m_ColorBoxFG->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
+		return this->m_ColorBoxFG;
+	}
+	// If Mouse Position is over the Color Picker Background Button
+	else if (this->m_ColorBoxBG->m_Button.getGlobalBounds().contains(sf::Vector2f(_mousePos))) {
+		return this->m_ColorBoxBG;
+	}
 	// If Mouse Position is NOT over a Button
 	else {
 		return nullptr;
@@ -135,6 +181,8 @@ void cButtonManager::RemoveHovers() { // Removes all Hovers
 	this->m_ButtonSizeDown->RemoveHover();
 	this->m_ButtonLoadFile->RemoveHover();
 	this->m_ButtonSaveFile->RemoveHover();
+	this->m_ColorBoxFG->RemoveHover();
+	this->m_ColorBoxBG->RemoveHover();
 }
 
 void cButtonManager::UnselectButtons() { // Unselects all Buttons
@@ -147,6 +195,8 @@ void cButtonManager::UnselectButtons() { // Unselects all Buttons
 	this->m_ButtonSizeDown->Unselect();
 	this->m_ButtonLoadFile->Unselect();
 	this->m_ButtonSaveFile->Unselect();
+	this->m_ColorBoxFG->Unselect();
+	this->m_ColorBoxBG->Unselect();
 }
 
 void cButtonManager::HoverButton(sf::Vector2i _mousePos) {

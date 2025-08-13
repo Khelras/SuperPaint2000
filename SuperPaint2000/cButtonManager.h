@@ -8,6 +8,8 @@
 #include "cButtonSizeDown.h"
 #include "cButtonLoadFile.h"
 #include "cButtonSaveFile.h"
+#include "cColorBoxFG.h"
+#include "cColorBoxBG.h"
 
 class cButtonManager {
 private:
@@ -17,6 +19,12 @@ private:
 	// Text
 	sf::Font m_Font;
 	sf::Text* m_Text;
+
+	// Textures
+	sf::Image m_NormalImage;
+	sf::Texture m_NormalTexture;
+	sf::Image m_TransparentImage;
+	sf::Texture m_TransparentTexture;
 
 	// Button Classes
 	cButtonRectangle* m_ButtonRectangle;
@@ -28,6 +36,8 @@ private:
 	cButtonSizeDown* m_ButtonSizeDown;
 	cButtonLoadFile* m_ButtonLoadFile;
 	cButtonSaveFile* m_ButtonSaveFile;
+	cColorBoxFG* m_ColorBoxFG;
+	cColorBoxBG* m_ColorBoxBG;
 
 public:
 	cButtonManager(cWindowManager* _window, cToolManager* _toolManager);
@@ -39,6 +49,5 @@ public:
 	void UnselectButtons();
 	void HoverButton(sf::Vector2i _mousePos);
 	void ClickButton(sf::Vector2i _mousePos);
-	
 };
 
