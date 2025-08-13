@@ -3,10 +3,12 @@
 cFileInterface::cFileInterface(cToolManager* _toolManager, sf::Vector2f _size) : cButton(_size) {
     this->m_ToolManager = _toolManager;
     this->m_Text = nullptr;
+    this->m_ImportedImageTexture = nullptr;
 }
 
 cFileInterface::cFileInterface(cToolManager* _toolManager, sf::Vector2f _size, std::string _text) : cButton(_size) {
     this->m_ToolManager = _toolManager;
+    this->m_ImportedImageTexture = nullptr;
 
     // Text
     if (this->m_Font.openFromFile("fonts/arial.ttf") == false) printf("ERR: Unable to Load Font!\n"); // FOR DEBUGGING
@@ -68,6 +70,21 @@ void cFileInterface::LoadFile(cWindowManager* _window, cCanvas* _canvas) {
         // Create the FileOpenDialog object.
         hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL, IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
 
+        LPCWSTR PNG = L"png Files";
+        LPCWSTR JPG = L"jpg/jpeg Files";
+        LPCWSTR BMP = L"bmp Files";
+        LPCWSTR ALL = L"All Files";
+
+        COMDLG_FILTERSPEC FileFilter[] = {
+            { PNG, L"*.png" },
+            { JPG, L"*.jpg; *.jpeg" },
+            { BMP, L"*.bmp"},
+            { ALL, L"*.*" }
+        };
+
+        pFileOpen->SetFileTypes(4, FileFilter);
+        pFileOpen->SetDefaultExtension(L"png");
+
         if (SUCCEEDED(hr)) {
             // Show the Open dialog box.
             hr = pFileOpen->Show(NULL);
@@ -106,6 +123,21 @@ void cFileInterface::SaveFile(sf::RenderTexture* _canvasTexture) {
 
         // Create the FileOpenDialog object.
         hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_ALL, IID_IFileSaveDialog, reinterpret_cast<void**>(&pFileSave));
+
+        LPCWSTR PNG = L"png Files";
+        LPCWSTR JPG = L"jpg/jpeg Files";
+        LPCWSTR BMP = L"bmp Files";
+        LPCWSTR ALL = L"All Files";
+
+        COMDLG_FILTERSPEC FileFilter[] = {
+            { PNG, L"*.png" },
+            { JPG, L"*.jpg; *.jpeg" },
+            { BMP, L"*.bmp"},
+            { ALL, L"*.*" }
+        };
+
+        pFileSave->SetFileTypes(4, FileFilter);
+        pFileSave->SetDefaultExtension(L"png");
 
         if (SUCCEEDED(hr)) {
             // Show the Save dialog box.
