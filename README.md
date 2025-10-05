@@ -1,2 +1,4 @@
 # SuperPaint2000
-MDS Year-2025 Sem-2 Paint Tool Project
+School Year: MDS Year-2025 Sem-2
+Class: GD1P03 - 2D Game Programming
+Project: Paint Tool Project
